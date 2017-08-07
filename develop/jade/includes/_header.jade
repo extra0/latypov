@@ -1,4 +1,20 @@
 header.header
 	.container
-		a.header__logo(href="/")
-			img(src="img/logo.png" alt="Site Logo")
+		.row
+			.col-sm-3
+				a(href="#!")
+					img(src="/img/logo.png", alt="")
+			.col-sm-3
+				div
+					span Москва
+					a(href="#!") +7 (499) 390-17-58
+				div
+					a(href="#!") Оставить заявку
+			.col-sm-6
+				.header__menu
+					ul.header__menu-list
+						each item in menu
+							li.header__menu-list-item
+								a.header__menu-list-item-link(href="#!") #{item}
+				.header__search
+					button(type="button") Поиск
