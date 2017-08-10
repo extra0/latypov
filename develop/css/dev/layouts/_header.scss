@@ -1,0 +1,151 @@
+.header {
+	padding: 39px 0;
+	&--index {
+		background: url(../img/index-bg.jpg) center center no-repeat;
+		position: relative;
+		background-size: cover;
+		z-index: 0;
+		&:before {
+			content: '';
+			@include position(absolute, 0 0 0 0);
+			width: 100%;
+			height: 100%;
+			background: rgba(0, 35, 59, 0.75) ;
+		}
+	}
+	&__logo {}
+	&__address {
+		margin: -4px 46px 0 0;
+		display: inline-block;
+		vertical-align: top;
+		&-city {
+			color: #fff;
+			font-size: 12px;
+			display: block;
+			margin: 0 0 2px 0;
+			font-weight: 300;
+		}
+		&-phone {
+			color: $blue;
+			font-size: 18px;
+			display: inline-block;
+			@include transition(all 0.2s ease-in-out);
+			&:hover,
+			&:focus {
+				color: $ruby;
+				text-decoration: none;
+			}
+		}
+	}
+	&__order {
+		color: #fff;
+		display: inline-block;
+		margin-top: 16px;
+		border-bottom: 1px dashed rgba(255,255,255,0.5);
+		@include transition(all 0.2s ease-in-out);
+		&:hover,
+		&:focus {
+			border-bottom: 1px dashed $hoverRuby;
+			text-decoration: none;
+			color: $ruby;
+		}
+	}
+
+	&__menu {
+		// text-align: right;
+		display: inline-block;
+		vertical-align: top;
+		@include transition(all 0.2s ease-in-out);
+		&.active {
+			opacity: 0;
+			pointer-events: none;
+		}
+		&-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0;
+			&-item {
+				display: inline-block;
+				vertical-align: top;
+				margin-right: 38px;
+				&-link {
+					color: #fff;
+					text-transform: uppercase;
+					display: block;
+					padding-bottom: 5px;
+					font-weight: 500;
+					border-bottom: 3px solid transparent;
+					@include transition(all 0.2s ease-in-out);
+					&.current,
+					&:hover,
+					&:focus {
+						text-decoration: none;
+						color: #fff;
+						border-color: $blue;
+					}
+				}
+			}
+		}
+	}
+	&__search {
+		display: inline-block;
+		vertical-align: top;
+		&-form {
+			display: inline-block;
+			width: calc(100% - 10px);
+			pointer-events: none;
+			@include position(absolute, -25px null null -20px);
+			opacity: 0;
+			@include transition(all 0.2s ease-in-out);
+			&.active {
+				opacity: 1;
+				pointer-events: auto;
+				top: -5px;
+			}
+		}
+		&-trigger {
+			background: url(../img/magnifier.png) 0 0 no-repeat;
+			width: 14px;
+			height: 14px;
+			border: none;
+			position: relative;
+			@include transition(all 0.2s ease-in-out);
+			&.active {
+				background: none;
+				&:before {
+					content: '';
+					@include position(absolute, 7px null null 0);
+					width: 100%;
+					height: 2px;
+					background: #fff;
+					@include transform(rotate(-45deg));
+				}
+				&:after {
+					content: '';
+					@include position(absolute, 7px null null 0);
+					width: 100%;
+					height: 2px;
+					background: #fff;
+					@include transform(rotate(45deg));
+				}
+			}
+		}
+		&-submit {
+			@extend .header__search-trigger;
+			margin-right: 10px;
+		}
+		&-input {
+			border: none;
+			border-bottom: 1px solid #fff;
+			background: none;
+			color: #fff;
+			height: 30px;
+			width: calc(100% - 60px);
+		}
+	}
+	&__menu-search-wrap {
+		text-align: right;
+		margin: 16px 0 0 0;
+		position: relative;
+	}
+}

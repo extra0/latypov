@@ -1,2 +1,24 @@
 footer.footer
 	.container
+		.row
+			.col-sm-4
+				p.footer__text &copy; 2010 – 2017
+				p.footer__text Студия Латыпова
+				.footer__social
+					a.footer__social-link(href="#!" target="_blank")
+						img(src="img/fb.png", alt="")
+					a.footer__social-link(href="#!" target="_blank")
+						img(src="img/inst.png", alt="")
+				a.footer__link.footer__link--presentation(href="#!") Презентация студии
+			.col-sm-3.col-sm-offset-1
+				a.footer__text(href="tel:+74993901758") +7 (499) 390-17-58
+				a.footer__link(href="mailto:mail@latypovstudio.ru") mail@latypovstudio.ru
+				p.footer__text.footer__text--small г.Москва, Сущевская ул. д35, офис 200
+			.col-sm-4
+				.footer__menu
+					ul.footer__menu-list
+						each item in menu
+							li.footer__menu-list-item
+								a.footer__menu-list-item-link(href="#!") #{item}
+				.text-right
+					a.footer__link(href="#!") Sitemap

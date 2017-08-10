@@ -1,4 +1,4 @@
-@include font-face("Exo 2", "../fontsExo2Regular/", normal, normal, $file-formats: ttf);
+@include font-face("Exo 2", "../fonts/Exo2Regular", normal, normal, $file-formats: ttf);
 @include font-face("Exo 2", "../fonts/Exo2Italic", normal, italic, $file-formats: ttf);
 @include font-face("Exo 2", "../fonts/Exo2Light", 300, normal, $file-formats: ttf);
 @include font-face("Exo 2", "../fonts/Exo2LightItalic", 300, italic, $file-formats: ttf);

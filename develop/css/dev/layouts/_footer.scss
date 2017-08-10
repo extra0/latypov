@@ -1,0 +1,90 @@
+.footer {
+	background: #eeeeee;
+	padding: 31px 0 23px 0;
+	&__text {
+		font-size: 18px;
+		display: block;
+		margin: 0 0 5px;
+		color: #000;
+		&:hover,
+		&:focus {
+			color: #000;
+			text-decoration: none;
+		}
+		&--small {
+			font-size: 14px;
+			margin-top: 14px;
+		}
+	}
+	&__social {
+		display: inline-block;
+		margin-top: 9px;
+		&-link {
+			display: inline-block;
+			margin-right: 11px;
+		}
+	}
+	&__link {
+		border-bottom: 1px solid $hoverBlue;
+		&:hover,
+		&:focus {
+			border-bottom: 1px solid $hoverRuby;
+			text-decoration: none;
+		}
+		&--presentation {
+			margin: 4px 0 0 46px;
+			display: inline-block;
+			vertical-align: top;
+			border-bottom: 1px solid $hoverBlue;
+			position: relative;
+			&:hover,
+			&:focus {
+				color: $ruby;
+				text-decoration: none;
+				border-bottom: 1px solid $hoverRuby;
+			}
+			&:before {
+				content: '';
+				@include position(absolute, 5px null null -40px);
+				width: 28px;
+				height: 37px;
+				background: url(../img/pdf.png) 0 0 no-repeat;
+				@include transition(all 0.2s ease-in-out);
+			}
+			&:hover {
+				&:before {
+					background: url(../img/pdf-hover.png) 0 0 no-repeat;
+				}
+			}
+		}
+	}
+	&__menu {
+		text-align: right;
+		margin-bottom: 40px;
+		&-list {
+			list-style-type: none;
+			padding: 0;
+			margin: 0 0 0 -30px;
+			&-item {
+				display: inline-block;
+				vertical-align: top;
+				&:not(:first-child) {
+					margin-left: 20px;
+				}
+				&-link {
+					text-transform: uppercase;
+					border-bottom: 1px solid $main-color;
+					color: $main-color;
+					font-weight: 600;
+					&.current,
+					&:hover,
+					&:focus {
+						color: $ruby;
+						border-bottom: 1px solid $ruby;
+						text-decoration: none;
+					}
+				}
+			}
+		}
+	}
+}
