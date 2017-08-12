@@ -28,6 +28,14 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}")
 							button.header__search-submit(type="submit") 
 							input.header__search-input(type="text" required placeholder="Поиск по сайту")
 						button.header__search-trigger.js-search-trigger(type="button")
+	if (indexHeader != true)
+		.header__sub-menu
+			.container
+				ul.header__sub-menu-list
+					each item, k in portfolio
+						li.header__sub-menu-list-item
+							a.header__sub-menu-list-item-link(href="#!" class="#{ k == 0 ? 'current' : ''}") 
+								span #{item}
 		if (indexHeader == true)
 			.row
 				.col-xs-12

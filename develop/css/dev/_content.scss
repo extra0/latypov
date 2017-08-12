@@ -465,3 +465,51 @@
 	}
 
 }
+
+.cost-section {
+	margin: 94px 0 88px 0;
+	&__block {
+		max-width: 870px;
+		margin: 0 auto;
+		&-img {
+			float: right;
+			margin: 54px 0 20px 0;
+		}
+		&-title {
+			font-weight: 300;
+			font-style: italic;
+			font-size: 24px;
+			display: block;
+			margin-bottom: 14px;
+		}
+		&-sub-title {
+			display: block;
+			text-transform: uppercase;
+			font-weight: bold;
+			font-size: 18px;
+		}
+		&-text {
+			font-weight: 300;
+			font-size: 18px;
+			display: block;
+			margin-bottom: 15px;
+			a {
+				border-bottom: 1px solid $hoverBlue;
+				&:hover,
+				&:focus {
+					color: $ruby;
+					border-bottom: 1px solid $hoverRuby;
+					text-decoration: none;
+				}
+				&.dashed {
+					border-bottom: 1px dashed $hoverBlue;
+					&:hover,
+					&:focus {
+						color: $ruby;
+						border-bottom: 1px dashed $hoverRuby;
+					}
+				}
+			}
+		}
+	}
+}

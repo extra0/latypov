@@ -4,6 +4,8 @@ block append head
 	meta(name="keywords" content="")
 	title Портфолио общая страница
 block content
+	.container
+		h1.title.text-center Портфолио
 	// работы
 	.flex-section#portfolio
 		.col-sm-6.flex-section__block
@@ -136,4 +138,26 @@ block content
 					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
 					span.flex-section__block-item-block-link-devider /
 					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
-	// работы
+	// / работы
+	// стоимость работ
+	.cost-section
+		.container
+			.cost-section__block
+				.row
+					.col-sm-4
+						img.cost-section__block-img(src="img/cost.png", alt="")
+					.col-sm-8
+						span.cost-section__block-title — Сколько стоит создание сайта?
+						span.cost-section__block-sub-title Примерно:
+						span.cost-section__block-text 
+							| Посмотрите 
+							a(href="#!") цены «ОТ»
+						span.cost-section__block-sub-title ТОЧНЕЕ:
+						span.cost-section__block-text 
+							| Заполните 
+							a.dashed.js-order-trigger(href="#!") быструю заявку 
+							| на создание сайта онлайн или 
+							a(href="#!") скачайте наш БРИФ
+							| , заполните его и отправьте на 
+							a(href="mailto:mail@latypovstudio.ru") mail@latypovstudio.ru
+	// / стоимость работ
