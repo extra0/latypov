@@ -77,4 +77,9 @@ $(function(){
 	    });
 	});
 
+	// показываем форму в портфолио
+	$('.js-form-trigger').on('click', function(){
+		$('.form-section__block-hidden').slideToggle(200);
+	});
+
 });

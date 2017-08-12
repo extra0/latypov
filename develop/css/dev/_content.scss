@@ -281,13 +281,17 @@
 	}
 }
 .page-description {
-	margin-bottom: 59px;
+	// margin-bottom: 59px;
 	* {
 		font-size: 18px;
 	}
 	p {
 		font-size: 18px;
 		font-weight: 300;
+	}
+	&--width-short {
+		max-width: 870px;
+		margin: 0 auto 59px auto;
 	}
 }
 .feedback {
@@ -299,7 +303,7 @@
 		margin-bottom: 20px;
 		&-img {
 			display: block;
-			margin-bottom: 10px;
+			margin: 0 auto 10px auto;
 		}
 		&-title {
 			margin: 0;
@@ -403,10 +407,54 @@
 			text-align: center;
 			font-size: 24px;
 			font-weight: 500;
+			line-height: normal;
 			margin-bottom: 46px;
 		}
 		&-wrap {
 			margin-bottom: 43px;
+		}
+		&-phone {
+			font-size: 48px;
+			display: inline-block;
+			color: #fff;
+			font-weight: 300;
+			margin: -10px 0 4px 0;
+			&:hover,
+			&:focus {
+				color: $ruby;
+				text-decoration: none;
+			}
+		}
+		&-link {
+			font-weight: 300;
+			font-size: 24px;
+			color: #fff;
+			border-bottom: 1px solid rgba(255,255,255,0.5);
+			&:hover,
+			&:focus {
+				color: $ruby;
+				text-decoration: none;
+				border-bottom: 1px solid $hoverRuby;
+			}
+			&--dashed {
+				border-bottom: 1px dashed rgba(255,255,255,0.5);
+				&:hover,
+				&:focus {
+					color: $ruby;
+					text-decoration: none;
+					border-bottom: 1px dashed $hoverRuby;
+				}
+			}
+		}
+		&-text {
+			font-size: 18px;
+			display: block;
+			color: #fff;
+			margin: 21px 0 17px 0 ;
+			font-weight: 300;
+		}
+		&-hidden {
+			display: none;
 		}
 	}
 }
@@ -509,6 +557,31 @@
 						border-bottom: 1px dashed $hoverRuby;
 					}
 				}
+			}
+		}
+	}
+}
+
+.portfolio {
+	&-participant {
+		margin-top: 60px;
+		padding: 56px 0 38px 0;
+		border-top: 1px solid #e5e5e5;
+		&__section {
+			@include display(flex);
+			@include align-items(flex-start);
+			@include justify-content(center);
+		}
+		&__block {
+			margin: 0 24px 20px;
+			&-position {
+				font-weight: 600;
+				display: block;
+				margin-bottom: 10px;
+			}
+			&-name {
+				display: block;
+				font-weight: normal;
 			}
 		}
 	}

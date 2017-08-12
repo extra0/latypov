@@ -1,0 +1,85 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Портфолио типовая
+block content
+	.container
+		h1.title.text-center Сайт компании «Comaro в России»
+	.container
+		.portfolio-info
+			img.portfolio-info__img(src="img/portfolio-fav.png", alt="")
+			a.portfolio-info__link(href="#!" target="_blank") koobo.ru
+			span.portfolio-info__date 11.06.2017
+		.portfolio-info__preview Создан сайт Koobo.ru сервис бесплатных объявлений и полный каталог профессионального оборудования. Сервис "Кубо" поможет найти любое необходимое оборудование, как Б/У, так и через огромный каталог нового оборудования продающегося разными компаниями.
+	br
+	.text-center
+		img(src="img/content/p-img-1.jpg", alt="")
+	br
+	.container
+		.page-description.page-description--width-short
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quidem. Laboriosam, suscipit! Tenetur atque eligendi, maiores quia hic deleniti voluptate, quidem, velit voluptatibus nostrum eaque, excepturi vitae a modi dolore!
+	.text-center
+		img(src="img/content/p-img-2.jpg", alt="")
+	br
+	.container
+		.page-description.page-description--width-short
+			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Tenetur, quidem. Laboriosam, suscipit! Tenetur atque eligendi, maiores quia hic deleniti voluptate, quidem, velit voluptatibus nostrum eaque, excepturi vitae a modi dolore!
+	// участники проекта
+	.portfolio-participant
+		.container
+			.portfolio-participant__section
+				.portfolio-participant__block
+					span.portfolio-participant__block-position Дизайнер
+					span.portfolio-participant__block-name Рауф Латыпов
+				.portfolio-participant__block
+					span.portfolio-participant__block-position Проект-менеджер
+					span.portfolio-participant__block-name Ольга Ефремова
+				.portfolio-participant__block
+					span.portfolio-participant__block-position Технолог
+					span.portfolio-participant__block-name Константин Орленко
+				.portfolio-participant__block
+					span.portfolio-participant__block-position Реклама и продвижение
+					span.portfolio-participant__block-name Ольга Пасхина
+					span.portfolio-participant__block-name Елена Ефимова
+	// / участники проекта
+	// форма
+	.form-section.form-section--img-bg
+		.container
+			.form-section__block.form-section__block--dark
+				.form-section__block-title Хотите заказать подобный проект?<br>Или что то совершенно иное?
+				.text-center
+					a.form-section__block-phone(href="tel:+7 (499) 390-17-58") +7 (499) 390-17-58
+					br
+					a.form-section__block-link(href="mailto:mail@latypovstudio.ru") mail@latypovstudio.ru
+					span.form-section__block-text Или
+					a.form-section__block-link.form-section__block-link--dashed.js-form-trigger(href="javascript:void(0);") оставьте заявку
+				.form-section__block-hidden
+					br
+					br
+					form(action="#!")
+						.form-section__block-wrap
+							.row
+								.col-sm-6
+									.form-group
+										input.form-control(type="text" required)
+										label.form-label Ваше имя
+									.form-group
+										input.form-control.js-mask(type="tel" required)
+										label.form-label Ваш телефон
+									.form-group
+										input.form-control.js-mask(type="email" required)
+										label.form-label Ваш e-mail
+								.col-sm-6
+									.form-group
+										textarea.form-control.form-control--area(name="message" required)
+										label.form-label Сообщение \ Описание задачи
+						.row
+							.col-sm-6
+								input.js-politicks-checkbox#politicks-1(type="checkbox" checked required)
+								label.form-label--checkbox(for="politicks-1")
+									| Соглашаюсь с 
+									a.form-link(href="#!") политикой обработки персональных данных
+							.col-sm-6
+								button.btn.btn-default.btn-lg(type="submit") Отправить
+	// / форма

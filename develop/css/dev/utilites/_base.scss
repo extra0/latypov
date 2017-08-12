@@ -22,4 +22,5 @@ button, input, textarea, select {
 }
 .main-wrapper {
 	overflow: hidden;
+	min-height: calc(100% - 154px);
 }
