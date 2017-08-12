@@ -663,3 +663,40 @@
 		}
 	}
 }
+
+.vacancy-section {
+	text-align: center;
+	margin-top: 50px;
+	&__block {
+		margin-bottom: 26px;
+		&-link {
+			border-bottom: 1px solid $hoverBlue;
+			color: $blue;
+			font-weight: 500;
+			font-size: 24px;
+			&:hover,
+			&:focus {
+				border-bottom: 1px solid $hoverRuby;
+				text-decoration: none;
+				color: $ruby;
+			}
+		}
+		&-text {
+			font-weight: 300;
+			display: block;
+			font-size: 15px;
+			margin-top: 110px;
+			margin-bottom: 55px;
+			a {
+				border-bottom: 1px solid $hoverBlue;
+				color: $blue;
+				&:hover,
+				&:focus {
+					border-bottom: 1px solid $hoverRuby;
+					text-decoration: none;
+					color: $ruby;
+				}
+			}
+		}
+	}
+}
