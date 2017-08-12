@@ -149,6 +149,10 @@ input[type="checkbox"] {
 		opacity: 0.5;
 		cursor: no-drop;
 	}
+	&-info {
+		background: $blue;
+		color: #fff;
+	}
 	&-default {
 		font-weight: bold;
 		border: 2px solid #fff;

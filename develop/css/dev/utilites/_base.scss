@@ -24,3 +24,11 @@ button, input, textarea, select {
 	overflow: hidden;
 	min-height: calc(100% - 154px);
 }
+.js-fancybox {
+	outline: none;
+	&:focus,
+	&:hover,
+	&:active {
+		outline: none;
+	}
+}

@@ -2,15 +2,29 @@ extends includes/_layout
 block append head
 	meta(name="description" content="")
 	meta(name="keywords" content="")
-	title Отзывы Общая
+	title Отзыв внутренняя
 block content
 	.container
-		h1.title.text-center Отзывы клиентов
-		.feedback__section.feedback__section--white
-			.row
-				- for (i=1;i<=21;i++) {
-					include includes/components/_feedback-item
-				- }
+		h1.title.text-center Отзыв от «Glass-Engineering»
+		.row
+			.col-sm-9
+				.feedback__content
+					img.feedback__content-blockquote--left(src="img/blockquote.png", alt="")
+					p С компанией «Студия Латыпова» сотрудничаю больше 7 лет. Именно здесь был создан мой первый сайт, который успешно работает до сих пор. Так что можно сказать, что мы растем и развиваемся вместе.
+					p Теперь моих сайтов уже три, в перспективе еще один довольно большой проект. Все работы от начала и до конца делает «Студия Латыпова» и обращаться к кому-то другому у меня не возникает ни желания, ни надобности. Точно знаю, что не подведут, сделают хорошо.
+					p То же самое можно сказать и в отношении работ, связанных с доработками и продвижением сайтов. Сотрудники компании «Студия Латыпова» не только успешно рекламируют и продвигают мои проекты, но и подсказывают новые решения, находясь в курсе последних веяний рынка.
+					img.feedback__content-blockquote--right(src="img/blockquote.png", alt="")
+			.col-sm-3
+				.feedback__sidebar
+					.feedback__sidebar-name «Glass Engineering»
+					.feedback__sidebar-position Елена Васина (Генеральный директор)
+					a.js-fancybox(href="img/content/feedback.jpg")
+						img.feedback__sidebar-img(src="img/content/feedback.jpg", alt="")
+		.text-center
+			a.btn.btn-lg.btn-info(href="#!") К списку отзывов
+		br
+		br
+		br
 	// форма
 	.form-section.form-section--img-bg
 		.container
