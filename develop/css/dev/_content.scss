@@ -33,10 +33,22 @@
 		}
 	}
 	&__title {
+		position: relative;
 		&-value {
 			font-size: 48px;
 			font-weight:300;
-			@include transition(all 0.2s ease-in-out);
+			@include transition(all 0.5s ease-in-out);
+			@include filter(blur(50px));
+			position: absolute;
+			top: 0;
+			left: 0;
+			right: 0;
+			opacity: 0;
+			&.active {
+				@include filter(blur(0px));
+				position: relative;
+				opacity: 1;
+			}
 		}
 	}
 	&__scroll {
@@ -152,10 +164,29 @@
 		-ms-flex: 0 0 auto;
 		-webkit-flex: 0 0 auto;
 		flex: 0 0 auto;
+		@include transition(all 0.5s ease-in-out);
 		@include display(flex);
 		@include justify-content(center);
 		@include align-items(center);
 		background-size: cover!important;
+		position: relative;
+		top: 20px;
+		opacity: 0;
+		&:before {
+			content: '';
+			@include position(absolute, 0 null null 0);
+			width: 100%;
+			height: 100%;
+			z-index: -1;
+			background: -moz-linear-gradient(-45deg, rgba(234,234,234,1) 0%, rgba(255,255,255,0) 100%);
+			background: -webkit-linear-gradient(-45deg, rgba(234,234,234,1) 0%,rgba(255,255,255,0) 100%);
+			background: linear-gradient(135deg, rgba(234,234,234,1) 0%,rgba(255,255,255,0) 100%);
+			filter: progid:DXImageTransform.Microsoft.gradient( startColorstr='#eaeaea', endColorstr='#00ffffff',GradientType=1 );
+		}
+		&.active {
+			opacity: 1;
+			top: 0;
+		}
 		&:hover {
 			.flex {
 				&-section {
@@ -340,31 +371,34 @@
 		&:hover {
 			&:before {
 				right: -30px;
+				opacity: 0;
 			}
 		}
 	}
 }
 
 .form-section {
-	background: url(../img/form-bg.jpg) 0 0 no-repeat;
-	background-size: cover;
 	padding: 51px 0;
-	&--dark {
-		.form-section__block-title {
-			color: #fff;
-		}
-		.form-label {
-			color: #fff;
-			position: absolute;
-		}
-		.form-label--checkbox,
-		.form-control {
-			color: #fff;
-		}
+	&--img-bg {
+		background: url(../img/form-bg.jpg) 0 0 no-repeat;
+		background-size: cover;
 	}
 	&__block {
 		max-width: 635px;
 		margin: 0 auto 20px auto;
+		&--dark {
+			.form-section__block-title {
+				color: #fff;
+			}
+			.form-label {
+				color: #fff;
+				position: absolute;
+			}
+			.form-label--checkbox,
+			.form-control {
+				color: #fff;
+			}
+		}
 		&-title {
 			text-align: center;
 			font-size: 24px;
@@ -375,4 +409,59 @@
 			margin-bottom: 43px;
 		}
 	}
+}
+
+.modal {
+	position: fixed;
+	@include transition(all 0.2s ease-in-out);
+	@include position(fixed, 0 0 null null);
+	height: 100%;
+	overflow: auto;
+	z-index: 100;
+	background: #003854;
+	padding: 40px 70px;
+	opacity: 0;
+	@include transform(translateX(100%));
+	&.active {
+		opacity: 1;
+		@include transform(translateX(0%));
+	}
+	&__close {
+		@include position(absolute, 20px 20px null null);
+		width: 18px;
+		height: 18px;
+		cursor: pointer;
+		@include transition(all 0.2s ease-in-out);
+		&:hover {
+			@include transform(rotate(180deg));
+		}
+		&:before,
+		&:after {
+			content: '';
+			@include position(absolute, 8px null null 0);
+			width: 100%;
+			height: 3px;
+			border-radius: 3px;
+			background: #fff;
+			@include transform(rotate(45deg));
+		}
+		&:after {
+			@include transform(rotate(-45deg));
+		}
+	}
+	&__title {
+		color: #fff;
+		font-weight: 500;
+		font-size: 24px;
+		text-align: center;
+		display: block;
+		margin: 0 0 40px 0;
+	}
+	form {
+		max-width: 310px;
+	}
+	.form-control--area {
+		height: 115px;
+	}
+
 }

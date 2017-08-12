@@ -2,9 +2,7 @@ extends includes/_layout
 block append head
 	meta(name="description" content="")
 	meta(name="keywords" content="")
-	title Главная страница
-	- logoWhite = true;
-	- indexHeader = true
+	title Портфолио общая страница
 block content
 	// работы
 	.flex-section#portfolio
@@ -50,7 +48,6 @@ block content
 							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
 							span.flex-section__block-item-block-link-devider /
 							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
-
 		.col-sm-3.no-padding
 			.flex-section
 				a.flex-section__block.col-sm-12(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
@@ -95,53 +92,48 @@ block content
 							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
 							span.flex-section__block-item-block-link-devider /
 							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+		.col-sm-3.no-padding
+			.flex-section
+				a.flex-section__block.col-sm-12(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
+					.flex-section__block-item
+						span.flex-section__block-item-title.flex-section__block-item-title--sm Вечерние афиши ресторана «Бараш»
+						span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+						.flex-section__block-item-block-link
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+							span.flex-section__block-item-block-link-devider /
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+				a.flex-section__block.col-sm-12(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
+					.flex-section__block-item
+						span.flex-section__block-item-title.flex-section__block-item-title--sm Тейбл тент ресторана Prime Beef
+						span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+						.flex-section__block-item-block-link
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+							span.flex-section__block-item-block-link-devider /
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+		.col-sm-3.no-padding
+			.flex-section
+				a.flex-section__block.col-sm-12(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
+					.flex-section__block-item
+						span.flex-section__block-item-title.flex-section__block-item-title--sm Вечерние афиши ресторана «Бараш»
+						span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+						.flex-section__block-item-block-link
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+							span.flex-section__block-item-block-link-devider /
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+				a.flex-section__block.col-sm-12(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
+					.flex-section__block-item
+						span.flex-section__block-item-title.flex-section__block-item-title--sm Тейбл тент ресторана Prime Beef
+						span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+						.flex-section__block-item-block-link
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+							span.flex-section__block-item-block-link-devider /
+							span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+		.col-sm-6.flex-section__block
+			a.flex-section__block-item.flex-section__block-item--large(href="#!" style="background: url(../img/content/portfolio.jpg) 0 0 no-repeat")
+				span.flex-section__block-item-title Сайт компании «BrusCustom»
+				span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+				.flex-section__block-item-block-link
+					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+					span.flex-section__block-item-block-link-devider /
+					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
 	// работы
-	// текст о нас
-	.container
-		.title.text-center О нас
-		.page-description.width-short
-			p Студия Латыпова — компания уже 7 лет оказывающая широкий спектр услуг для клиентов различных направлений и отраслей. Каждый создаваемый нами продукт (от логотипа и  визитки до поддержки и продвижения сайта) является шагом к развитию бизнеса заказчика и за время нашей работы было создано более 180 проектов.
-			p Мы ориентированы на долгосрочное и надежное сотрудничество. Многие клиенты остаются с нами и доверяют нам новые задачи.
-	// / текст о нас
-	// отзывы
-	.feedback__section
-		.container
-			.title.text-center Отзывы наших клиентов
-			.row
-				- for (i=1;i<=3;i++) {
-					include includes/components/_feedback-item
-				- }
-			.text-center
-				a.feedback__all-link(href="#!") Посмотреть все отзывы
-	// / отзывы
-	// форма
-	.form-section.form-section--img-bg
-		.container
-			.form-section__block.form-section__block--dark
-				.form-section__block-title Отправить заявку на проект
-				form(action="#!")
-					.form-section__block-wrap
-						.row
-							.col-sm-6
-								.form-group
-									input.form-control(type="text" required)
-									label.form-label Ваше имя
-								.form-group
-									input.form-control.js-mask(type="tel" required)
-									label.form-label Ваш телефон
-								.form-group
-									input.form-control.js-mask(type="email" required)
-									label.form-label Ваш e-mail
-							.col-sm-6
-								.form-group
-									textarea.form-control.form-control--area(name="message" required)
-									label.form-label Сообщение \ Описание задачи
-					.row
-						.col-sm-6
-							input.js-politicks-checkbox#politicks-1(type="checkbox" checked required)
-							label.form-label--checkbox(for="politicks-1")
-								| Соглашаюсь с 
-								a.form-link(href="#!") политикой обработки персональных данных
-						.col-sm-6
-							button.btn.btn-default.btn-lg(type="submit") Отправить
-	// / форма

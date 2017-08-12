@@ -149,6 +149,10 @@ input[type="checkbox"] {
 		text-decoration: none;
 		border-color: $ruby;
 	}
+	&[disabled] {
+		opacity: 0.5;
+		cursor: no-drop;
+	}
 	&-default {
 		font-weight: bold;
 		border: 2px solid #fff;

@@ -1,30 +1,34 @@
-header.header.header--index.header--dark
+header.header(class="#{indexHeader == true ? 'header--index header--dark':''}")
 	.container
+		.row
+			.col-sm-2
+				a.header__logo(href="/")
+					if (logoWhite != true)
+						img.header__logo-img(src="/img/logo.png", alt="")
+						img.header__logo-text-img(src="/img/logo-dark-text.png", alt="")
+						img.header__logo-face-img(src="/img/logo-face.png", alt="")
+					else
+						img.header__logo-img(src="/img/white-logo.png", alt="")
+						img.header__logo-text-img(src="/img/logo-white-text.png", alt="")
+						img.header__logo-face-img(src="/img/logo-face.png", alt="")
+			.col-sm-4.col-sm-offset-1
+				.header__address
+					span.header__address-city Москва
+					a.header__address-phone(href="tel:+74993901758") +7 (499) 390-17-58
+				a.header__order.js-order-trigger(href="javascript:void(0);") Оставить заявку
+			.col-sm-5
+				.header__menu-search-wrap
+					.header__menu
+						ul.header__menu-list
+							each item, i in menu
+								li.header__menu-list-item
+									a.header__menu-list-item-link(href="#!" class="#{i == 2 ? 'current':''}") #{item}
+					.header__search
+						form.header__search-form(action="#!")
+							button.header__search-submit(type="submit") 
+							input.header__search-input(type="text" required placeholder="Поиск по сайту")
+						button.header__search-trigger.js-search-trigger(type="button")
 		if (indexHeader == true)
-			.row
-				.col-sm-2
-					a.header__logo(href="/")
-						if (logoWhite != true)
-							img.header__logo-img(src="/img/logo.png", alt="")
-						else
-							img.header__logo-img(src="/img/white-logo.png", alt="")
-				.col-sm-4.col-sm-offset-1
-					.header__address
-						span.header__address-city Москва
-						a.header__address-phone(href="tel:+74993901758") +7 (499) 390-17-58
-					a.header__order(href="#order") Оставить заявку
-				.col-sm-5
-					.header__menu-search-wrap
-						.header__menu
-							ul.header__menu-list
-								each item in menu
-									li.header__menu-list-item
-										a.header__menu-list-item-link(href="#!") #{item}
-						.header__search
-							form.header__search-form(action="#!")
-								button.header__search-submit(type="submit") 
-								input.header__search-input(type="text" required placeholder="Поиск по сайту")
-							button.header__search-trigger(type="button")
 			.row
 				.col-xs-12
 					.index-preview
@@ -35,12 +39,13 @@ header.header.header--index.header--dark
 							.index-preview__note-text Мы создаем
 							.index-preview__note-small и делаем это хорошо
 						.index-preview__title
-							.index-preview__title-value фирменные стили
+							.index-preview__title-value.active фирменные стили
+							.index-preview__title-value капоты из карбона
+							.index-preview__title-value Пряники и самовары
+							.index-preview__title-value хаос и сеем панику
 						.index-preview__scroll
 							a.index-preview__scroll-anchor.js-anchor(href="#portfolio") Свежие работы
 							br
 							img.index-preview__scroll-mouse(src="img/mouse.png", alt="")
 							br
 							img.index-preview__scroll-arrow(src="img/arrow.png", alt="")
-		else
-			p Lorem ipsum dolor sit amet, consectetur adipisicing elit. Accusantium fugiat, optio tempore consequatur facere iste hic perferendis rerum quam aspernatur quaerat architecto autem, nobis similique illum reiciendis ullam odit saepe.
