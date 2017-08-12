@@ -632,3 +632,34 @@
 		}
 	}
 }
+.error-page {
+	background: url(../img/404.jpg) center no-repeat;
+	background-size: cover;
+	&__content {
+		text-align: center;
+		color: #fff;
+		margin-top: 50px;
+		&-title {
+			line-height: normal;
+			font-size: 48px;
+			display: block;
+			font-weight: 600;
+			margin-bottom: 52px;
+		}
+		&-text {
+			font-size: 18px;
+			font-weight: 300;
+			display: block;
+			line-height: 23px;
+			margin-bottom: 20px;
+			a {
+				border-bottom: 1px solid $hoverBlue;
+				&:hover,
+				&:focus {
+					border-bottom: 1px solid $hoverRuby;
+					text-decoration: none;
+				}
+			}
+		}
+	}
+}

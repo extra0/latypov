@@ -1,0 +1,12 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Ошибка 404
+	- error = true;
+	- logoWhite = true;
+block content
+	.error-page__content
+		.error-page__content-title 404 ошибка
+		.error-page__content-text Страница не найдена
+		.error-page__content-text Воспользуйтесь меню для перехода в нужный раздел<br>или перейдите на <a href="#!">главную страницу</a>

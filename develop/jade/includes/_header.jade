@@ -1,4 +1,4 @@
-header.header(class="#{indexHeader == true ? 'header--index header--dark':''}")
+header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" class="#{error == true ? 'header--dark':''}")
 	.container
 		.row
 			.col-sm-2
@@ -50,7 +50,7 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}")
 							br
 							img.index-preview__scroll-arrow(src="img/arrow.png", alt="")
 	if (indexHeader != true)
-		.header__sub-menu
+		.header__sub-menu(class="#{error == true ? 'hidden':''}")
 			.container
 				ul.header__sub-menu-list
 					each item, k in portfolio
