@@ -686,7 +686,6 @@
 			display: block;
 			font-size: 15px;
 			margin-top: 110px;
-			margin-bottom: 55px;
 			a {
 				border-bottom: 1px solid $hoverBlue;
 				color: $blue;
@@ -696,6 +695,21 @@
 					text-decoration: none;
 					color: $ruby;
 				}
+			}
+		}
+	}
+	&__text {
+		font-weight: 300;
+		display: block;
+		font-size: 15px;
+		a {
+			border-bottom: 1px solid $hoverBlue;
+			color: $blue;
+			&:hover,
+			&:focus {
+				border-bottom: 1px solid $hoverRuby;
+				text-decoration: none;
+				color: $ruby;
 			}
 		}
 	}
