@@ -8,3 +8,4 @@
 @include font-face("Exo 2", "../fonts/Exo2SemiBoldItalic", 600, italic, $file-formats: ttf);
 @include font-face("Exo 2", "../fonts/Exo2Bold", 700, normal, $file-formats: ttf);
 @include font-face("Exo 2", "../fonts/Exo2BoldItalic", 700, italic, $file-formats: ttf);
+@include font-face("Rubl", "../fonts/ALSRubl", normal, normal, $file-formats: ttf);

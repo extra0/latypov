@@ -1,7 +1,7 @@
 .text-center {text-align: center;}
 .text-right {text-align: right;}
 
-.no-margin {margin: 0;}
+.no-margin {margin: 0!important;}
 .no-padding {padding: 0;}
 
 .m-t-5 {margin-top: 5px;}
@@ -157,6 +157,15 @@ input[type="checkbox"] {
 		font-weight: bold;
 		border: 2px solid #fff;
 	}
+	&-warning {
+		background: #ffcc00;
+		color: $main-color;
+		&:focus,
+		&:hover {
+			color: $main-color;
+			background: lighten(#ffcc00, 10%);
+		}
+	}
 	&-block {
 		display: block;
 		width: 100%;
@@ -170,4 +179,10 @@ input[type="checkbox"] {
 	font-weight: 600;
 	line-height: normal;
 	margin: 0 0 36px 0;
+}
+.subtitle {
+	display: block;
+	font-size: 24px;
+	font-weight: 500;
+	margin-bottom: 47px;
 }

@@ -102,7 +102,7 @@
 			}
 			.header__logo-face-img {
 				@include transform(scale(1));
-				// right: 71px;
+				right: 71px;
 				@include transition(all 0.2s 0.4s ease-in-out);
 			}
 		}

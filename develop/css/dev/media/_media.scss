@@ -17,4 +17,9 @@
 	.container {
 		width: 1370px
 	}
+	.flex-section {
+		&__block {
+			min-height: 250px;
+		}
+	}
 }

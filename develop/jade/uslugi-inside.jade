@@ -1,0 +1,92 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Услуги Типовая
+	- category = true;
+block content
+	.container
+		h1.title.text-center Корпоративный сайт
+		.page-description
+			p Мы создаем решения любой сложности, области применения и на любом шаге проекта (от начальных этапов подготовки концепции и брендинга до поддержки и продвижения уже готовых проектов).
+			p Нам можно доверить широкий спектр работ начиная от создания логотипа, фир.стиля и создания сайта, а далее его поддержки и продвижения до интеграции CRM, разработки мобильных приложений и множества разных узкоспециализированных задач.
+	// блок с ценой
+	.service-description
+		.container
+			.service-description__info
+				.service-description__info-block.col-sm-6
+					.service-description__info-block-price
+						span.service-description__info-block-text Стоимость от:
+						span.service-description__info-block-price-value 50 000
+							span.rub a
+					a.btn.btn-lg.btn-warning.js-order-trigger(href="javascript:void(0);") Отправить заявку
+				.service-description__info-block.col-sm-6
+					span.service-description__info-block-text(style="margin-top: 36px;") Что входит в стоимость:
+					ul.service-description__info-block-list
+						li.service-description__info-block-list-item Проектная подготовка и персональный менеджмент;
+						li.service-description__info-block-list-item Лицензионная CMS (Битрикс, NetCat, Umi или др.);
+						li.service-description__info-block-list-item Создание дизайн-макетов;
+						li.service-description__info-block-list-item Верстка (HTML, JavaScript-программирование);
+						li.service-description__info-block-list-item Внедрение и интеграция с системой управления (CMS);
+						li.service-description__info-block-list-item Первичное заполнение сайта;
+						li.service-description__info-block-list-item Тестирование;
+						li.service-description__info-block-list-item При необходимости перенос на сервер клиента;
+	// / блок с ценой
+	// работы
+	.text-center
+		.subtitle Примеры работ
+	// / работы
+	.flex-section.no-margin
+		- for (i=1;i<=6;i++) {
+			a.flex-section__block.col-sm-3(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
+				.flex-section__block-item
+					span.flex-section__block-item-title.flex-section__block-item-title--sm Вечерние афиши ресторана «Бараш»
+					span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+					.flex-section__block-item-block-link
+						span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+						span.flex-section__block-item-block-link-devider /
+						span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+		- }
+		a.flex-section__block.col-sm-3( href="#!")
+			.flex-section__block-item.flex-section__block-item--dark
+				span.flex-section__block-item-title.flex-section__block-item-title--sm Вечерние афиши ресторана «Бараш»
+				span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
+				img.flex-section__block-item-img(src="img/content/some-img.png", alt="")
+				.flex-section__block-item-block-link
+					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
+					span.flex-section__block-item-block-link-devider /
+					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
+		a.flex-section__block.col-sm-3(style="background: url(../img/all-bg.jpg) center no-repeat" href="#!")
+			.flex-section__block-item
+				.flex-section__block-item-note Все работы
+	// форма
+	.form-section.form-section--img-bg
+		.container
+			.form-section__block.form-section__block--dark
+				.form-section__block-title Отправить заявку на проект
+				form(action="#!")
+					.form-section__block-wrap
+						.row
+							.col-sm-6
+								.form-group
+									input.form-control(type="text" required)
+									label.form-label Ваше имя
+								.form-group
+									input.form-control.js-mask(type="tel" required)
+									label.form-label Ваш телефон
+								.form-group
+									input.form-control.js-mask(type="email" required)
+									label.form-label Ваш e-mail
+							.col-sm-6
+								.form-group
+									textarea.form-control.form-control--area(name="message" required)
+									label.form-label Сообщение \ Описание задачи
+					.row
+						.col-sm-6
+							input.js-politicks-checkbox#politicks-1(type="checkbox" checked required)
+							label.form-label--checkbox(for="politicks-1")
+								| Соглашаюсь с 
+								a.form-link(href="#!") политикой обработки персональных данных
+						.col-sm-6
+							button.btn.btn-default.btn-lg(type="submit") Отправить
+	// / форма
