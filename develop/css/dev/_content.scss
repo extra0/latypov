@@ -891,3 +891,23 @@
 		}
 	}
 }
+
+.contact {
+	&__block {
+		margin-bottom: 30px;
+	}
+	&__text {
+		font-size: 18px;
+		color: $main-color;
+		&:hover {
+			color: $main-color;
+			text-decoration: none;
+		}
+		&--strong {
+			font-weight: bold;
+		}
+	}
+	&__link {
+		font-size: 18px;
+	}
+}
