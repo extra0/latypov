@@ -33,7 +33,7 @@ $(function(){
 
 	// чередуем замену заголовков вопросов
 	var k = 1;
-	kblock = $('.index-preview__title-value'),
+	kblock = $('.index-preview__title-value, .news__sidebar-animate-version-img'),
 		knum = kblock.length;
 	setInterval(function() {
 		if (k < knum) {
@@ -75,11 +75,27 @@ $(function(){
 				$(this).addClass('active');
 		    }
 	    });
+
+		// анимируем ракету
+	    if ($('.news__sidebar-animate').length == 1) {
+
+	    	var w_top = $(window).scrollTop(),   
+	    		e_top = $('.news__sidebar-animate').offset().top,    
+	    		w_height = $(window).height(),   
+	    		d_height = $(document).height(), 
+	    		e_height = $('.news__sidebar-animate').outerHeight();
+
+    	    if(w_top + ($(window).height() - $(window).height() * 0.1) >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+    			$('.news__sidebar-animate').addClass('active');
+    	    }
+	    }
 	});
 
 	// показываем форму в портфолио
 	$('.js-form-trigger').on('click', function(){
 		$('.form-section__block-hidden').slideToggle(200);
 	});
+
+
 
 });

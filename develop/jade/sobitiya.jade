@@ -1,0 +1,79 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Список событий
+block content
+	.container
+		h1.title.text-center События студии и отрасли
+		.row
+			.col-sm-9
+				.news__list
+					- for (i=1;i<=4;i++) {
+						.news__list-item
+							span.news__list-item-date 19/05/17
+							a.news__list-item-link(href="#!") Студии исполняется 7 лет
+							span.news__list-item-preview Каждый создаваемый нами продукт (от логотипа и визитки до поддержки и продвижения сайта) является шагом к развитию бизнеса нашего клиента и за время нашей работы было создано более 180 проектов.
+							img.news__list-item-img(src="img/content/news-img.jpg", alt="")
+							.news__list-item-tags
+								a.news__list-item-tags-link(href="#!") #новости и события
+								a.news__list-item-tags-link(href="#!") #вакансии
+								a.news__list-item-tags-link(href="#!") #новости и события
+								a.news__list-item-tags-link(href="#!") #вакансии
+					- }
+				.text-center
+					a.btn.btn-info.btn-lg.news__list-btn(href="javascript:void(0)") А можно ещё?
+			.col-sm-3
+				.news__sidebar
+					.news__sidebar-block
+						span.news__sidebar-block-title По тэгам:
+						ul.news__sidebar-list
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link.news__sidebar-list-item-link--red(href="#!")
+									span Все
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link.news__sidebar-list-item-link--red(href="#!")
+									span #новости и события
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link.news__sidebar-list-item-link--red(href="#!")
+									span #вакансии
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link.news__sidebar-list-item-link--red(href="#!")
+									span #студия
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link.news__sidebar-list-item-link--red(href="#!")
+									span #процесс
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link.news__sidebar-list-item-link--red(href="#!")
+									span #вне работы
+					.news__sidebar-block
+						span.news__sidebar-block-title По годам:
+						ul.news__sidebar-list
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link(href="#!")
+									span 2015
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link(href="#!")
+									span 2014
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link(href="#!")
+									span 2013
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link(href="#!")
+									span 2012
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link(href="#!")
+									span 2011
+							li.news__sidebar-list-item
+								a.news__sidebar-list-item-link(href="#!")
+									span 2010
+					.news__sidebar-block
+						.news__sidebar-animate
+							img.news__sidebar-animate-monitor(src="img/monitor.png", alt="")
+							.news__sidebar-animate-version
+								img.news__sidebar-animate-version-img.active(src="img/v1.jpg", alt="")
+								img.news__sidebar-animate-version-img(src="img/v2.jpg", alt="")
+								img.news__sidebar-animate-version-img(src="img/v3.jpg", alt="")
+							.news__sidebar-animate-roket
+								img.news__sidebar-animate-roket-img(src="img/roket.png", alt="")
+								img.news__sidebar-animate-flame-img(src="img/flame.png", alt="")
