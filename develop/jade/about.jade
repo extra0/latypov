@@ -1,0 +1,44 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title О студии
+block content
+	.container
+		h1.title.text-center О студии
+		.row
+			.col-sm-6.m-b-30
+				strong(style="font-size:18px;text-transform:uppercase") В двух словах
+				p Студия Латыпова — компания уже 7 лет оказывающая широкий спектр услуг для компаний различных направлений и отраслей. Каждый создаваемый нами продукт (от логотипа и визитки до поддержки и продвижения сайта) является шагом к развитию бизнеса нашего клиента и за время нашей работы было создано более 180 проектов.
+			.col-sm-6.m-b-30
+				strong(style="font-size:18px;text-transform:uppercase") Основы нашей работы
+				p Базовой составляющей является погружение в деятельность и в специфику работы клиента, что в свою очередь позволяет построить максимально правильный подход к решению задач с которыми к нам приходит клиент. Мы работаем с честным, открытым и личным подходом. Мы любим каждого нашего клиента и с уважением к вашему бизнесу  помогаем делать его лучше и эффективнее.
+	// отзывы
+	.feedback__section
+		.container
+			.subtitle.text-center Отзывы наших клиентов
+			.row
+				- for (i=1;i<=3;i++) {
+					include includes/components/_feedback-item
+				- }
+			.text-center
+				a.feedback__all-link(href="#!") Посмотреть все отзывы
+	// / отзывы
+	.container
+		.m-t-30.p-t-30
+			.row
+				.col-sm-6.m-b-20.text-center
+					.m-b-10
+						i Рабочая зона
+					a.js-fancybox(href="img/content/work-area.jpg")
+						img(src="img/content/work-area.jpg", alt="")
+				.col-sm-6.m-b-20.text-center
+					.m-b-10
+						i Зона отдыха
+					a.js-fancybox(href="img/content/relax-area.jpg")
+						img(src="img/content/relax-area.jpg", alt="")
+				.text-center
+					a.feedback__all-link(href="#!") Работа в студии
+	br
+	br
+	br

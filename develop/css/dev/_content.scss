@@ -241,15 +241,11 @@
 				}
 			}
 			&--dark {
-				.flex-section__block-item-title,
-				.flex-section__block-item-text,
-				.flex-section__block-item-block-link-value {
+				.flex-section__block-item-title {
 					color: $main-color;
 				}
 				&:hover {
-					.flex-section__block-item-title,
-					.flex-section__block-item-text,
-					.flex-section__block-item-block-link-value {
+					.flex-section__block-item-title {
 						color: #fff;
 					}
 				}
