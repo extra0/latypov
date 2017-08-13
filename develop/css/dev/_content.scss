@@ -763,6 +763,23 @@
 					}
 				}
 			}
+			&-description {
+				font-size: 15px;
+				p, li, span, div {
+					font-size: 15px;
+				}
+				a {
+					color: $blue;
+					font-weight: 500;
+					border-bottom: 1px solid $hoverBlue;
+					&:hover,
+					&:focus {
+						color: $ruby;
+						text-decoration: none;
+						border-bottom: 1px solid $hoverRuby;
+					}
+				}
+			}
 		}
 		&-btn {
 			position: relative;
