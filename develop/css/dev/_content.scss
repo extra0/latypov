@@ -895,6 +895,7 @@
 .contact {
 	&__block {
 		margin-bottom: 30px;
+		padding: 0;
 	}
 	&__text {
 		font-size: 18px;
@@ -909,5 +910,44 @@
 	}
 	&__link {
 		font-size: 18px;
+	}
+}
+
+.category-section {
+	margin: 80px 0 0px 0;
+	@include display(flex);
+	@include align-items(flex-start);
+	@include justify-content(flex-start);
+	@include flex-wrap(wrap);
+	&__block {
+		margin-bottom: 46px;
+		&-img {
+			display: block;
+			margin: 0 auto 10px auto;
+		}
+		&-title {
+			font-weight: 500;
+			font-size: 24px;
+			display: block;
+			margin: -7px 0 20px 0;
+		}
+		&-list {
+			color: $blue;
+			margin: 0;
+			padding: 0 0 0 17px;
+			&-item {
+				color: $blue;
+				margin-bottom: 16px;
+				&-link {
+					color: $main-color;
+					border-bottom: 1px solid #919191;
+					&:hover,
+					&:focus {
+						text-decoration: none;
+						border-bottom: 1px solid $hoverRuby;
+					}
+				}
+			}
+		}
 	}
 }

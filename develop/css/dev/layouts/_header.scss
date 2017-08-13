@@ -204,6 +204,7 @@
 	}
 
 	&__sub-menu {
+		position: relative;
 		text-align: center;
 		border-top: 1px solid #e5e5e5;
 		border-bottom: 1px solid #e5e5e5;
@@ -216,6 +217,19 @@
 				margin-left: -4px;
 				display: inline-block;
 				vertical-align: top;
+				&:hover {
+					background: $blue;
+					.header__dropdown-menu {
+						opacity: 1;
+						pointer-events: auto;
+					}
+					.header__sub-menu-list-item-link {
+						color: #fff;
+						span {
+							border-bottom: 1px solid transparent;
+						}
+					}
+				}
 				&-link {
 					font-weight: 500;
 					padding: 17px 25px 16px 25px;
@@ -237,5 +251,48 @@
 				}
 			}
 		}
+	}
+
+	&__dropdown {
+		&-menu {
+			@include position(absolute, 52px null null 0);
+			background: $blue;
+			width: 100%;
+			padding: 40px 0 29px 0;
+			opacity: 0;
+			pointer-events:none;
+			@include transition(all 0.2s ease-in-out);
+			&-img {
+				margin-right: 20%;
+				float: right;
+			}
+			&-list {
+				list-style-type: none;
+				text-align: left;
+				padding: 0;
+				margin: 0;
+				display: inline-block;
+				vertical-align: top;
+				&-item {
+					display: inline-block;
+					vertical-align: top;
+					width: 31%;
+					margin-right: 10px;
+					margin-bottom: 15px;
+					&-link {
+						color: #fff;
+						font-size: 15px;
+						font-weight: 300;
+						border-bottom: 1px solid rgba(255,255,255,0.5);
+						&:hover,
+						&:focus {
+							border-bottom: 1px solid $hoverRuby;
+							text-decoration: none;
+						}
+					}
+				}
+			}
+		}
+
 	}
 }

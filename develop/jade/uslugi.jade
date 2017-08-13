@@ -1,0 +1,106 @@
+extends includes/_layout
+block append head
+	meta(name="description" content="")
+	meta(name="keywords" content="")
+	title Услуги
+	- category = true;
+block content
+	.container
+		h1.title.text-center Услуги
+		.page-description
+			p Мы создаем решения любой сложности, области применения и на любом шаге проекта (от начальных этапов подготовки концепции и брендинга до поддержки и продвижения уже готовых проектов).
+			p Нам можно доверить широкий спектр работ начиная от создания логотипа, фир.стиля и создания сайта, а далее его поддержки и продвижения до интеграции CRM, разработки мобильных приложений и множества разных узкоспециализированных задач.
+		.category-section.row
+			- for (i=1;i<=2;i++) {
+				.category-section__block.col-sm-4
+					.row
+						.col-sm-3
+							img.category-section__block-img(src="img/cat-1.png", alt="")
+						.col-sm-9.no-padding
+							.category-section__block-title Сайты и web-разработка
+							ul.category-section__block-list
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Сайт-визитка
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Корпоративный сайт
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Интернет-магазин
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Промо сайт (Landing page)
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Адаптивный сайт (Мобильный)
+				.category-section__block.col-sm-4
+					.row
+						.col-sm-3
+							img.category-section__block-img(src="img/cat-2.png", alt="")
+						.col-sm-9.no-padding
+							.category-section__block-title Фир.стиль и брендинг
+							ul.category-section__block-list
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Логотип и фир.стиль
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Рекламная продукция
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Полиграфия
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Иллюстрации
+				.category-section__block.col-sm-4
+					.row
+						.col-sm-3
+							img.category-section__block-img(src="img/cat-3.png", alt="")
+						.col-sm-9.no-padding
+							.category-section__block-title Поддержка и развитие сайта
+							ul.category-section__block-list
+								li.category-section__block-list-item
+									a.category-section__block-list-item-link(href="#!") Поддержка проекта
+			- }
+			.category-section__block.col-sm-4
+				.row
+					.col-sm-3
+						img.category-section__block-img(src="img/cat-1.png", alt="")
+					.col-sm-9.no-padding
+						.category-section__block-title Сайты и web-разработка
+						ul.category-section__block-list
+							li.category-section__block-list-item
+								a.category-section__block-list-item-link(href="#!") Сайт-визитка
+							li.category-section__block-list-item
+								a.category-section__block-list-item-link(href="#!") Корпоративный сайт
+							li.category-section__block-list-item
+								a.category-section__block-list-item-link(href="#!") Интернет-магазин
+							li.category-section__block-list-item
+								a.category-section__block-list-item-link(href="#!") Промо сайт (Landing page)
+							li.category-section__block-list-item
+								a.category-section__block-list-item-link(href="#!") Адаптивный сайт (Мобильный)
+		.text-center
+			img(src="img/large-roket.png", alt="")
+	// форма
+	.form-section.form-section--img-bg
+		.container
+			.form-section__block.form-section__block--dark
+				.form-section__block-title Отправить заявку на проект
+				form(action="#!")
+					.form-section__block-wrap
+						.row
+							.col-sm-6
+								.form-group
+									input.form-control(type="text" required)
+									label.form-label Ваше имя
+								.form-group
+									input.form-control.js-mask(type="tel" required)
+									label.form-label Ваш телефон
+								.form-group
+									input.form-control.js-mask(type="email" required)
+									label.form-label Ваш e-mail
+							.col-sm-6
+								.form-group
+									textarea.form-control.form-control--area(name="message" required)
+									label.form-label Сообщение \ Описание задачи
+					.row
+						.col-sm-6
+							input.js-politicks-checkbox#politicks-1(type="checkbox" checked required)
+							label.form-label--checkbox(for="politicks-1")
+								| Соглашаюсь с 
+								a.form-link(href="#!") политикой обработки персональных данных
+						.col-sm-6
+							button.btn.btn-default.btn-lg(type="submit") Отправить
+	// / форма
