@@ -3,9 +3,35 @@ block append head
 	meta(name="description" content="")
 	meta(name="keywords" content="")
 	title О студии
+	- category = true;
+	- dark = true;
+	- about = true;
+	- logoWhite = true;
 block content
 	.container
-		h1.title.text-center О студии
+		h1.title.text-center.color-white О студии
+		.about__description С 2010 года занимаемся созданием логотипов, фирменных стилей, разработкой и поддержкой сайтов, мобильных приложений, crm-систем, а также рекламой  и продвижением интернет-проектов.
+		.about__info
+			.about__info-block
+				.about__info-block-wrap
+					.about__info-block-count
+						span(spincrement) 7
+					span.about__info-block-text лет
+				span.about__info-block-note успешной работы
+			.about__info-block
+				.about__info-block-wrap
+					.about__info-block-count 
+						span(spincrement) 180
+						| +
+					span.about__info-block-text проектов
+				span.about__info-block-note реализованных по всем<br>направлениям
+			.about__info-block
+				.about__info-block-wrap
+					.about__info-block-count
+						span(spincrement) 10
+						| +
+					span.about__info-block-text сотрудников	
+				span.about__info-block-note замечательных специалистов<br>работающих в студии и удаленно
 		.row
 			.col-sm-6.m-b-30
 				strong(style="font-size:18px;text-transform:uppercase") В двух словах
@@ -13,6 +39,19 @@ block content
 			.col-sm-6.m-b-30
 				strong(style="font-size:18px;text-transform:uppercase") Основы нашей работы
 				p Базовой составляющей является погружение в деятельность и в специфику работы клиента, что в свою очередь позволяет построить максимально правильный подход к решению задач с которыми к нам приходит клиент. Мы работаем с честным, открытым и личным подходом. Мы любим каждого нашего клиента и с уважением к вашему бизнесу  помогаем делать его лучше и эффективнее.
+	.competence
+		.container
+			.text-center
+				.subtitle Наши компетенции
+			ul.competence__list.row
+				- for (i=1;i<=7;i++) {
+					li.competence__list-item.col-sm-4
+						a.competence__list-item-link.clearfix(href="#!")
+							.competence__list-item-img-wrap
+								img.competence__list-item-img(src="img/cat-#{i}.png", alt="")
+							.competence__list-item-title Разработка, дизайн сайтов и интерфейсов
+							.competence__list-item-text Подробнее
+				- }
 	// отзывы
 	.feedback__section
 		.container

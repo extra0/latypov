@@ -97,5 +97,11 @@ $(function(){
 	});
 
 
+	// запуск пересчета цифр
+	$("[spincrement]").spincrement({
+		from: 0,
+	    duration: 5000,
+	    thousandSeparator: ''
+	});
 
 });
