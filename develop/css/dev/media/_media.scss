@@ -85,6 +85,15 @@
 		&__all-link {
 			margin-top: 0;
 		}
+		&__content {
+			margin-bottom: 60px;
+		}
+		&__sidebar {
+			float: none;
+			max-width: 300px;
+			text-align: center;
+			margin: 0 auto 50px auto;
+		}
 	}
 	.competence {
 		&__list {
@@ -181,6 +190,19 @@
 	.form-label--checkbox {
 		margin-bottom:25px;
 	}
+	.title {
+		font-size: 36px;
+	}
+	.index-preview {
+		&__title {
+			&-value {
+				font-size: 30px;
+			}
+		}
+	}
+	.flex-section__block-item--large {
+		min-height: 350px;
+	}
 }
 @media (max-width: 499px) {
 	.header {
@@ -276,7 +298,10 @@
 		&__email {
 			font-size: 12px;
 		}
-
+	}
+	.title {
+		font-size: 28px;
+		margin: 0 0 15px 0;
 	}
 }
 @media (min-width: 768px) and (max-width: 991px) {
@@ -318,6 +343,19 @@
 			}
 			&-description {
 				padding-right: 15px;
+			}
+		}
+	}
+	.form-section__block-title {
+		font-size: 20px;
+		margin-bottom: 30px;
+	}
+	.flex-section {
+		&__block {
+			&-item {
+				&--large {
+					min-height: 320px;
+				}
 			}
 		}
 	}
