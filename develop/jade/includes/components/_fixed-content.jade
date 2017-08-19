@@ -1,0 +1,25 @@
+.fixed-content.visible-xs
+	.container
+		.row
+			.col-xs-6
+				a.fixed-content__logo(href="/")
+					img(src="img/white-logo.png", alt="Logo")
+			.col-xs-6
+				button.pull-right.fixed-content__close(type="button")
+		.row
+			.col-xs-6.col-xs-offset-6
+				.fixed-content__controls
+					a.btn.btn-default.js-order-trigger.fixed-content__order(href="javascript:void(0);") Оставить заявку
+					ul.fixed-content__menu
+						each item in menu
+							li.fixed-content__menu-item
+								a.fixed-content__menu-item-link(href="#!") #{item}
+					.fixed-content__search
+						span.fixed-content__search-trigger
+						form.fixed-content__search-form(action="#!")
+							input.fixed-content__search-input(type="text" placeholder="Поиск" required)
+							button.fixed-content__search-submit(type="submit")
+					div
+						a.fixed-content__phone(href="tel:+74993901758") +7 (499) 390-17-58
+					div
+						a.fixed-content__email(href="mailto:mail@latypovstudio.ru" target="_blank") mail@latypovstudio.ru

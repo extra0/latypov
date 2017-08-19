@@ -134,10 +134,29 @@ $(function(){
 	    thousandSeparator: ''
 	});
 
-
+	// активируем второстепенное меню
 	$('.js-trigger').on('click', function(){
 		$(''+ $(this).attr('data-target') +'').slideToggle(500);
 		$(this).toggleClass('active');
 	});
+
+	// активируем главное меню на мобле
+	$('.header__menu-btn').on('click', function(){
+		$('.main-wrapper, .fixed-content').addClass('active');
+		$('.footer').addClass('hide');
+	});
+
+
+	// деактивируем главное меню на мобле
+	$('.fixed-content__close').on('click', function(){
+		$('.main-wrapper, .fixed-content').removeClass('active');
+		$('.footer').removeClass('hide');
+	});
+
+	// fixcontent seacrh trigger
+	$('.fixed-content__search-trigger').on('click', function() {
+		$(this).toggleClass('active');
+		$('.fixed-content__search-form').toggleClass('active');
+	})
 
 });
