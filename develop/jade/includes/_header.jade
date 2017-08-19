@@ -1,7 +1,7 @@
 header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" class="#{error == true ? 'header--dark':''}" class="#{dark == true ? 'header--dark':''}")
 	.container
 		.row
-			.col-sm-2
+			.col-sm-2.col-xs-5.col-xxs-4
 				a.header__logo(href="/")
 					if (logoWhite != true)
 						img.header__logo-img(src="/img/logo.png", alt="")
@@ -11,13 +11,15 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 						img.header__logo-img(src="/img/white-logo.png", alt="")
 						img.header__logo-text-img(src="/img/logo-white-text.png", alt="")
 						img.header__logo-face-img(src="/img/logo-face.png", alt="")
-			.col-sm-4.col-sm-offset-1
+			.col-md-4.col-md-offset-1.col-sm-4.col-xs-6.xxs-text-center
 				.header__address
 					span.header__address-city Москва
 					a.header__address-phone(href="tel:+74993901758") +7 (499) 390-17-58
-				a.header__order.js-order-trigger(href="javascript:void(0);") Оставить заявку
-			.col-sm-5
-				.header__menu-search-wrap
+				a.header__order.js-order-trigger.hidden-xs(href="javascript:void(0);") Оставить заявку
+			.col-md-5.col-sm-6.col-xs-1.col-xxs-2
+				button.header__menu-btn.visible-xs(type="button")
+					img(src="img/bars.png", alt="")
+				.header__menu-search-wrap.hidden-xs
 					.header__menu
 						ul.header__menu-list
 							each item, i in menu
@@ -51,19 +53,20 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 							img.index-preview__scroll-arrow(src="img/arrow.png", alt="")
 	if (indexHeader != true)
 		.header__sub-menu(class="#{error == true ? 'hidden':''}")
+			button.header__sub-menu-btn.js-trigger(type="button" data-target="#subMenu")
 			.container
-				ul.header__sub-menu-list
+				ul.header__sub-menu-list#subMenu
 					each item, k in portfolio
 						li.header__sub-menu-list-item
-							a.header__sub-menu-list-item-link(href="#!" class="#{ k == 0 ? 'current' : ''}") 
+							a.header__sub-menu-list-item-link(href="#!" class="#{ k == 0 ? 'current' : ''}" class="#{ k == 1 ? 'has-dropdown' : ''}") 
 								span #{item}
 							if (category == true && k == 1)
 								.header__dropdown-menu
 									.container
 										.row
-											.col-sm-2
+											.col-sm-2.hidden-sm.col-xs-3
 												img.header__dropdown-menu-img(src="img/d-cat-1.png", alt="")
-											.col-sm-10
+											.col-md-10.col-sm-12.col-xs-9
 												ul.header__dropdown-menu-list
 													li.header__dropdown-menu-list-item
 														a.header__dropdown-menu-list-item-link(href="#!") Сайт-визитка
@@ -97,4 +100,4 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 														a.header__dropdown-menu-list-item-link(href="#!") Промо сайт (Landing page)
 	if (about == true)
 		.header__video
-			iframe#iframe(src="https://www.youtube.com/embed/7FHS2NC3oOY?autoplay=1&mute=1&loop=1&rel=0", frameborder="0" allowfullscreen volume="0")
+			iframe#iframe.hidden-xs(src="https://www.youtube.com/embed/7FHS2NC3oOY?loop=1&autoplay=1&mute=1&rel=0", frameborder="0" allowfullscreen volume="0")

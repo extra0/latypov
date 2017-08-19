@@ -116,6 +116,14 @@
 			opacity: 0;
 			pointer-events: none;
 		}
+		&-btn {
+			background: none;
+			border: none;
+			padding: 0;
+			margin: 5px 0px;
+			width: 24px;
+			float: right;
+		}
 		&-list {
 			list-style-type: none;
 			padding: 0;
@@ -210,6 +218,11 @@
 		border-top: 1px solid #e5e5e5;
 		border-bottom: 1px solid #e5e5e5;
 		margin-top: 36px;
+		&-btn {
+			text-align: center;
+			margin: 10px 0;
+			display: none;
+		}
 		&-list {
 			list-style-type: none;
 			padding: 0;
