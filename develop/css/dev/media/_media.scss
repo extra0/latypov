@@ -13,6 +13,7 @@
 		    -webkit-perspective: 800px;
 		    pointer-events: none;
 			.main-wrapper__content {
+				background: #fff;
 				@include transition(all 0.2s ease-in-out);
 				@include position(absolute, 0 0 null 0);
 				@include transform(rotateY(61deg) scale(0.96));
@@ -170,6 +171,16 @@
 		background-size: cover;
 		top: 100px;
 	}
+	.form-section {
+		&__block {
+			&-wrap {
+				margin-bottom: 0;
+			}
+		}
+	}
+	.form-label--checkbox {
+		margin-bottom:25px;
+	}
 }
 @media (max-width: 499px) {
 	.header {
@@ -197,6 +208,9 @@
 				margin: 5px 0;
 			}
 		}
+		&--dark {
+
+		}
 		&__sub-menu {
 			&-btn {
 				display: block;
@@ -206,11 +220,11 @@
 				background: none;
 				border: none;
 				padding: 0;
-				background: url(../img/bars.png) 0 0 no-repeat;
+				background: url(../img/bars-bk.png) 0 0 no-repeat;
 				@include transition(all 0.2s ease-in-out);
 				&.active {
 					@include transform(rotate(180deg));
-					background: url(../img/close.png) 0 0 no-repeat;
+					background: url(../img/close-bk.png) 0 0 no-repeat;
 				}
 			}
 			&-list {

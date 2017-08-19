@@ -45,6 +45,17 @@
 		.header__search-input {
 			border-bottom: 1px solid #fff;
 		}
+		.header__menu-btn {
+			width: 24px;
+			height: 24px;
+			background: url(../img/bars.png) 0 0 no-repeat;
+		}
+		.header__sub-menu-btn {
+			background: url(../img/bars.png) 0 0 no-repeat;
+			&.active {
+				background: url(../img/close.png) 0 0 no-repeat;
+			}
+		}
 	}
 	&__address {
 		margin: -4px 46px 0 0;
@@ -125,6 +136,8 @@
 			padding: 0;
 			margin: 5px 0px;
 			width: 24px;
+			height: 24px;
+			background: url(../img/bars-bk.png) 0 0 no-repeat;
 			float: right;
 		}
 		&-list {
