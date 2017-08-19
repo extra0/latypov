@@ -272,10 +272,10 @@
 			margin-top: 30px;
 		}
 		&__address {
-			margin: -4px 0 0 40px;
+			margin: -4px 0 0 60px;
 		}
 		&__order {
-			margin-left: 43px;
+			margin-left: 63px;
 		}
 		&__video {
 			height: 620px;
@@ -326,6 +326,14 @@
 	.flex-section {
 		&__block {
 			min-height: 250px;
+		}
+	}
+	.header {
+		&__video {
+			&-player,
+			iframe {
+				@include transform(scale(2));		
+			}
 		}
 	}
 }

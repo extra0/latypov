@@ -81,13 +81,16 @@
 		}
 	}
 	&__logo {
+		position: relative;
+		width: 142px;
+		display: inline-block;
 		&-text-img {
-			@include position(absolute, -18px null null 15px);
+			@include position(absolute, -5px null null 0);
 			pointer-events:none;
 			opacity: 0;
 		}
 		&-face-img {
-			@include position(absolute, 0 38px null null);
+			@include position(absolute, 0 0 null null);
 			pointer-events:none;
 			@include transform(scale(0));
 		}
