@@ -84,11 +84,19 @@
 		display: inline-block;
 		margin-top: 16px;
 		border-bottom: 1px dashed $hoverGray;
-		&:hover,
-		&:focus {
+		&:hover {
 			border-bottom: 1px dashed $hoverRuby;
 			text-decoration: none;
 			color: $ruby;
+			&:focus {
+				border-bottom: 1px dashed $hoverRuby;
+				text-decoration: none;
+				color: $ruby;
+			}
+		}
+		&:focus {
+			border-bottom: 1px dashed $hoverGray;
+			text-decoration: none;
 		}
 	}
 	&__logo {
@@ -173,13 +181,32 @@
 			display: inline-block;
 			width: calc(100% - 10px);
 			pointer-events: none;
-			@include position(absolute, -25px null null -20px);
+			@include position(absolute, -5px null null 100%);
 			opacity: 0;
 			@include transition(all 0.2s ease-in-out);
 			&.active {
 				opacity: 1;
 				pointer-events: auto;
 				top: -5px;
+				left: -20px;
+				.header__search-input {
+					&::-webkit-input-placeholder {
+						opacity: 1;
+						padding-left: 0px;
+					}
+					&::-moz-placeholder {
+						opacity: 1;
+						padding-left: 0px;
+					}
+					&:-ms-input-placeholder {
+						opacity: 1;
+						padding-left: 0px;
+					}
+					&:-moz-placeholder {
+						opacity: 1;
+						padding-left: 0px;
+					}
+				}
 			}
 		}
 		&-trigger {
@@ -190,23 +217,9 @@
 			position: relative;
 			@include transition(all 0.2s ease-in-out);
 			&.active {
-				background: none;
-				&:before {
-					content: '';
-					@include position(absolute, 7px null null 0);
-					width: 100%;
-					height: 2px;
-					background: $main-color;
-					@include transform(rotate(-45deg));
-				}
-				&:after {
-					content: '';
-					@include position(absolute, 7px null null 0);
-					width: 100%;
-					height: 2px;
-					background: $main-color;
-					@include transform(rotate(45deg));
-				}
+				background: url(../img/close.png) 0 0 no-repeat;
+				background-size: 100%;
+				@include transform(rotate(180deg));
 			}
 		}
 		&-submit {
@@ -220,6 +233,26 @@
 			color: $main-color;
 			height: 30px;
 			width: calc(100% - 60px);
+			&::-webkit-input-placeholder {
+				@include transition(all 0.2s 0.3s ease-in-out);
+				opacity: 0;
+				padding-left: 40px;
+			}
+			&::-moz-placeholder {
+				@include transition(all 0.2s 0.3s ease-in-out);
+				opacity: 0;
+				padding-left: 40px;
+			}
+			&:-ms-input-placeholder {
+				@include transition(all 0.2s 0.3s ease-in-out);
+				opacity: 0;
+				padding-left: 40px;
+			}
+			&:-moz-placeholder {
+				@include transition(all 0.2s 0.3s ease-in-out);
+				opacity: 0;
+				padding-left: 40px;
+			}
 		}
 	}
 	&__menu-search-wrap {

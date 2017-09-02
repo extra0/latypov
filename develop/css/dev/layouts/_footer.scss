@@ -6,6 +6,7 @@
 		display: block;
 		margin: 0 0 5px;
 		color: #000;
+		font-weight: 500;
 		&:hover,
 		&:focus {
 			color: #000;
@@ -22,10 +23,26 @@
 		&-link {
 			display: inline-block;
 			margin-right: 11px;
+			width: 30px;
+			height: 30px;
+			@include transition(all 0.2s ease-in-out);
+			&--fb {
+				background: url(../img/fb.png)  0 0 no-repeat;
+				&:hover {
+					background: url(../img/fb-hover.png)  0 0 no-repeat;
+				}
+			}
+			&--inst {
+				background: url(../img/inst.png)  0 0 no-repeat;
+				&:hover {
+					background: url(../img/inst-hover.png)  0 0 no-repeat;
+				}
+			}
 		}
 	}
 	&__link {
 		border-bottom: 1px solid $hoverBlue;
+		font-weight: 500;
 		&:hover,
 		&:focus {
 			border-bottom: 1px solid $hoverRuby;

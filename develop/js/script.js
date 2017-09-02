@@ -39,6 +39,14 @@ $(function(){
 		$('.header__menu, .header__search-form').toggleClass('active');
 	});
 
+	$(document).mouseup(function(e) {
+		if ($('#order').has(e.target).length === 0 && $('.js-order-trigger')) {
+			if ($('#order').hasClass('active')) {
+				$('#order').removeClass('active');	
+			}
+		}
+	});
+
 	// работа с якорями
 	$('.js-anchor').bind("click", function(e) {
 		var anchor = $(this);

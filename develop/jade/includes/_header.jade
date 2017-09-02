@@ -47,9 +47,8 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 						.index-preview__scroll
 							a.index-preview__scroll-anchor.js-anchor(href="#portfolio") Свежие работы
 							br
-							img.index-preview__scroll-mouse(src="img/mouse.png", alt="")
-							br
-							img.index-preview__scroll-arrow(src="img/arrow.png", alt="")
+							.index-preview__scroll-img
+							.index-preview__scroll-arrows
 	if (indexHeader != true)
 		.header__sub-menu(class="#{error == true ? 'hidden':''}")
 			button.header__sub-menu-btn.js-trigger(type="button" data-target="#subMenu")

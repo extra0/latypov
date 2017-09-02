@@ -69,10 +69,14 @@ a {
 		border-radius: 5px;
 		&:focus {
 			border: 1px solid #00a9e2;
+			background: none;
 			& + .form-label {
 				top: 2px;
 				font-size: 11px;
 			}
+		}
+		&:hover {
+			background: none;
 		}
 		&--area {
 			height: 176px;
@@ -185,7 +189,8 @@ input[type="checkbox"] {
 }
 .subtitle {
 	display: block;
-	font-size: 24px;
+	// font-size: 24px;
+	font-size: 30px;
 	font-weight: 500;
 	margin-bottom: 47px;
 }

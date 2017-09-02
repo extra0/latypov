@@ -472,9 +472,9 @@
 @media (min-width: 1200px) {
 	
 }
-@media (min-width: 1400px) {
+@media (min-width: 1460px) {
 	.container {
-		width: 1370px
+		width: 1430px
 	}
 	.flex-section {
 		&__block {
@@ -487,6 +487,15 @@
 			iframe {
 				@include transform(scale(2));		
 			}
+		}
+	}
+	.modal {
+		padding: 128px;
+		&__close {
+			top: 59px;
+			right: 60px;
+			width: 21px;
+			height: 21px;
 		}
 	}
 }
