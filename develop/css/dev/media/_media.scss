@@ -499,3 +499,16 @@
 		}
 	}
 }
+@media (min-width: 2000px) {
+	.header__video-player, .header__video iframe {
+
+	}
+	.header {
+		&__video {
+			&-player,
+			iframe {
+				@include transform(scale(2.3));
+			}
+		}
+	}
+}

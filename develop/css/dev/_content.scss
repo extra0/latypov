@@ -57,7 +57,7 @@
 		&-anchor {
 			color: #fff;
 			font-style: italic;
-			border-bottom: 1px dashed rgba(255,255,255,0.5);
+			border-bottom: 1px dashed $hoverWhite;
 			display: inline-block;
 			margin-bottom: 13px;
 			@include transition(all 0.2s ease-in-out);
@@ -458,7 +458,7 @@
 					top: 20px;
 					&-value {
 						color: #fff;
-						border-bottom: 1px solid rgba(255,255,255,0.5);
+						border-bottom: 1px solid $hoverWhite;
 						@include transition(all 0.2s ease-in-out);
 						font-weight: 300;
 						&:hover,
@@ -503,7 +503,7 @@
 	}
 	&--width-short {
 		max-width: 870px;
-		margin: 0 auto 59px auto;
+		margin: 0 auto;
 	}
 }
 .feedback {
@@ -607,6 +607,12 @@
 	}
 	&__content {
 		margin-bottom:120px;
+		* {
+			font-size: 15px;
+			font-weight: 400;
+			line-height: 24px;
+			margin-bottom: 25px;
+		}
 		&-blockquote {
 			&--left {
 				float: left;
@@ -689,7 +695,7 @@
 			font-weight: 300;
 			font-size: 24px;
 			color: #fff;
-			border-bottom: 1px solid rgba(255,255,255,0.5);
+			border-bottom: 1px solid $hoverWhite;
 			&:hover,
 			&:focus {
 				color: $ruby;
@@ -697,7 +703,7 @@
 				border-bottom: 1px solid $hoverRuby;
 			}
 			&--dashed {
-				border-bottom: 1px dashed rgba(255,255,255,0.5);
+				border-bottom: 1px dashed $hoverWhite;
 				&:hover,
 				&:focus {
 					color: $ruby;
@@ -785,7 +791,7 @@
 			margin: 54px 0 20px 0;
 		}
 		&-title {
-			font-weight: 300;
+			// font-weight: 300;
 			font-style: italic;
 			font-size: 24px;
 			display: block;
@@ -798,10 +804,11 @@
 			font-size: 18px;
 		}
 		&-text {
-			font-weight: 300;
+			// font-weight: 300;
 			font-size: 18px;
 			display: block;
 			margin-bottom: 15px;
+			margin-right: -10px;
 			a {
 				border-bottom: 1px solid $hoverBlue;
 				&:hover,
@@ -842,7 +849,7 @@
 			}
 			&-name {
 				display: block;
-				font-weight: normal;
+				font-weight: 500;
 			}
 		}
 	}
@@ -850,10 +857,11 @@
 		margin: 0 0 30px;
 		text-align: center;
 		&__link {
-			color: $blue;
+			color: #0088cc;
 			margin: 0 6px 10px 6px;
 			font-weight: 500;
-			border-bottom: 1px solid $hoverBlue;
+			font-size: 18px;
+			border-bottom: 1px solid #0088cc;
 			&:hover,
 			&:focus {
 				border-bottom: 1px solid $hoverRuby;
@@ -862,8 +870,8 @@
 		}
 		&__date {
 			display: inline-block;
-			vertical-align: top;
-			margin: 0 20px 10px 20px;
+			margin: 0 20px;
+			font-size: 15px;
 		}
 		&-img {
 			max-width: 16px;
@@ -957,6 +965,7 @@
 
 .news {
 	&__list {
+		margin-bottom: 47px;
 		&-item {
 			padding-bottom: 33px;
 			margin-bottom: 43px;
@@ -988,7 +997,7 @@
 			&-tags {
 				&-link {
 					color: $blue;
-					font-weight: 500;
+					font-weight: 600;
 					font-style: italic;
 					font-size: 12px;
 					border-bottom: 1px solid $hoverBlue;
@@ -1023,10 +1032,10 @@
 		}
 		&-btn {
 			position: relative;
-			margin-bottom: 110px;
+			margin-bottom: 74px;
 			&:before {
 				content: '';
-				@include position(absolute, null -180px -110px null);
+				@include position(absolute, null -180px -74px null);
 				background: url(../img/girl.png) 0 0 no-repeat;
 				width: 175px;
 				height: 96px;
@@ -1058,6 +1067,7 @@
 					display: inline-block;
 					padding: 3px 21px;
 					&:hover,
+					&.active,
 					&:focus {
 						background: $blue;
 						color: #fff;
@@ -1067,6 +1077,7 @@
 						}
 					}
 					&--red {
+						&.active,
 						&:hover,
 						&:focus {
 							background: $ruby;
