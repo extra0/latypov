@@ -62,7 +62,7 @@ a {
 		width: 100%;
 		@include transition(all 0.2s ease-in-out);
 		border: 1px solid #cfcfcf;
-		background: rgba(255,255,255,0.1);
+		background: rgba(0, 169, 226, 0.1);
 		font-size: 18px;
 		font-weight: 300;
 		padding: 14px 20px;
@@ -191,7 +191,7 @@ input[type="checkbox"] {
 	display: block;
 	// font-size: 24px;
 	font-size: 30px;
-	font-weight: 500;
+	font-weight: 600;
 	margin-bottom: 47px;
 }
 .container-mini {

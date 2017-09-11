@@ -167,4 +167,9 @@ $(function(){
 		$('.fixed-content__search-form').toggleClass('active');
 	})
 
+	// collapse 
+	$('[data-collapse]').on('click', function(){
+		$(''+ $(this).attr('data-collapse')+'').toggleClass('active');
+	});
+
 });
