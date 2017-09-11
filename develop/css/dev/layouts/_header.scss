@@ -114,15 +114,22 @@
 		position: relative;
 		width: 142px;
 		display: inline-block;
-		&-text-img {
-			@include position(absolute, -5px null null 0);
-			pointer-events:none;
+		&-img {
 			opacity: 0;
+		}
+		&-type {
+			@include position(absolute, 0 0 null null);
+			
+		}
+		&-text-img {
+			@include position(absolute, 12px null null 0);
+			pointer-events:none;
+			opacity: 1;
 		}
 		&-face-img {
 			@include position(absolute, 0 0 null null);
 			pointer-events:none;
-			@include transform(scale(0));
+			@include transform(scale(1));
 		}
 		&:hover {
 			.header__logo-img {

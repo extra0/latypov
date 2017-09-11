@@ -83,7 +83,7 @@ $(function(){
 			kblock.eq(0).addClass('active');
 			kblock.eq(-1).removeClass('active');
 		}
-	}, 2500);
+	}, 1800);
 
 	// проверяем отмечен ли чекбокс соглашения
 	$('.js-politicks-checkbox').on('change', function(){
@@ -124,7 +124,11 @@ $(function(){
 	    		e_height = $('.news__sidebar-animate').outerHeight();
 
     	    if(w_top + ($(window).height() - $(window).height() * 0.1) >= e_top || w_height + w_top == d_height || e_height + e_top < w_height){
+    			$('.news__sidebar-animate-roket').css('transform', 'translateY(-'+ (w_top + ($(window).height() - $(window).height())) +'px)');
     			$('.news__sidebar-animate').addClass('active');
+    	    } else {
+    	    	$('.news__sidebar-animate-roket').css('transform', 'translateY(0%)');
+    	    	$('.news__sidebar-animate').removeClass('active');
     	    }
 	    }
 	});

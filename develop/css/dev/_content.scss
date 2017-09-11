@@ -922,6 +922,7 @@
 .vacancy-section {
 	text-align: center;
 	margin-top: 50px;
+	position: relative;
 	&__block {
 		margin-bottom: 26px;
 		&-link {
@@ -951,6 +952,15 @@
 					color: $ruby;
 				}
 			}
+		}
+		&-img-wrap {
+			// position: absolute;
+			// bottom: 0;
+			// width: 100%;
+			// max-height: 475px;
+			// img {
+			// 	max-height: 100%;
+			// }
 		}
 	}
 	&__text {
@@ -1131,10 +1141,10 @@
 				.news__sidebar-animate-flame-img {
 					opacity: 1;
 				}
-				.news__sidebar-animate-roket {
-					@include transform(translateY(-200%));
-					opacity: 0;
-				}
+				// .news__sidebar-animate-roket {
+				// 	@include transform(translateY(-200%));
+				// 	opacity: 0;
+				// }
 
 			}
 			&-version {
@@ -1158,7 +1168,7 @@
 			    right: 17px;
 			    margin: 0 auto;
 			    max-width: 126px;
-				@include transition(all 2s ease-in-out);
+				@include transition(all 0.5s linear);
 				pointer-events: none;
 			}
 			&-flame {
@@ -1318,7 +1328,7 @@
 					.competence__list-item-img {
 						position: relative;
 						left: 350%;
-						top: 5px;
+						// top: 5px;
 					}
 				}
 			}
