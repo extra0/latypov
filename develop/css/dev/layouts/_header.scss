@@ -63,6 +63,10 @@
 				background: url(../img/close.png) 0 0 no-repeat;
 			}
 		}
+		.header__search-trigger.active, .active.header__search-submit {
+			background: url(../img/close.png) 0 0 no-repeat;
+			background-size: 100%!important;
+		}
 	}
 	&__address {
 		margin: -4px 46px 0 0;
@@ -224,7 +228,7 @@
 			position: relative;
 			@include transition(all 0.2s ease-in-out);
 			&.active {
-				background: url(../img/close.png) 0 0 no-repeat;
+				background: url(../img/close-bk.png) 0 0 no-repeat;
 				background-size: 100%;
 				@include transform(rotate(180deg));
 			}
