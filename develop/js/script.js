@@ -176,4 +176,28 @@ $(function(){
 		$(''+ $(this).attr('data-collapse')+'').toggleClass('active');
 	});
 
+
+	// наводим на логотип и активируем разные анимации
+	$('.header__logo-type-wrap').mouseenter(function(){
+		var numb = 0;
+			numb = parseInt(Math.random($('.header__logo-type').length)*10);
+			if (numb < 8) {
+				numb = 0;
+			} else {
+				numb = parseInt(Math.random($('.header__logo-type').length)*10);
+			}
+			numb == 9 ? numb = 0 : numb = numb;
+
+		if (numb == 6) {
+			$('.header__logo-face-img').addClass('active');
+		}
+
+		$('.header__logo-type').eq(numb).addClass('active');
+	});
+
+	$('.header__logo-type-wrap').mouseleave(function(){
+		$('.header__logo-type, .header__logo-face-img').removeClass('active');
+	});
+
+
 });

@@ -458,14 +458,17 @@
 					top: 20px;
 					&-value {
 						color: #fff;
-						border-bottom: 1px solid $hoverWhite;
+						border: 1px solid #fff;
 						@include transition(all 0.2s ease-in-out);
 						font-weight: 300;
+						margin: 0 10px;
+						padding: 3px 16px 5px 16px;
+						border-radius: 15px;
 						&:hover,
 						&:focus {
-							border-bottom: 1px solid $hoverRuby;
 							text-decoration: none;
-							color: $ruby;
+							background: $ruby;
+							border-color: $ruby;
 						}
 					}
 					&-devider {
@@ -503,7 +506,7 @@
 	}
 	&--width-short {
 		max-width: 870px;
-		margin: 0 auto;
+		margin: 0 auto 59px auto;
 	}
 }
 .feedback {

@@ -117,9 +117,196 @@
 		&-img {
 			opacity: 0;
 		}
+		&-type-wrap {
+			position: absolute;
+		    top: 0;
+		    left: 0;
+		    width: 100%;
+		    height: 100%;
+		}
 		&-type {
-			@include position(absolute, 0 0 null null);
-			
+			pointer-events: none;
+			// руки
+			&-hand {
+				
+				&--one {
+					@include position(absolute, 35px -39px null null);
+					@include transition(all 0.2s ease-in-out);
+					opacity: 0;
+				}
+				&--two {
+					@include position(absolute, 2px -59px null null);
+					@include transition(all 0.2s 0s ease-in-out);
+					opacity: 0;
+				}
+			}
+
+			// пальма
+			&-glass {
+				@include position(absolute, 5px -2px null null);
+				@include transition(all 0.2s ease-in-out);
+				opacity: 0;
+				
+			}
+			&-palm {
+				@include position(absolute, 20px -50px null null);
+				@include transition(all 0.2s ease-in-out);
+				opacity: 0;
+				
+			}
+			&-sun {
+				@include position(absolute, -18px -50px null null);
+				@include transition(all 0.2s ease-in-out);
+				@include transform(scale(0));
+				opacity: 0;
+			}
+
+			// лампа 
+			&-ball-one {
+				position: absolute;
+			    top: 9px;
+			    right: -8px;
+			    @include transition(all 0.2s ease-in-out);
+			    opacity: 0;
+			    
+			}
+			&-ball-two {
+				position: absolute;
+				top: 1px;
+				right: -18px;
+				@include transition(all 0.2s 0.1s ease-in-out);
+				opacity: 0;
+			}
+			&-sky {
+				position: absolute;
+				top: -33px;
+				right: -75px;
+				@include transition(all 0.2s 0.2s ease-in-out);
+				opacity: 0;
+			}
+			&-lamp {
+				position: absolute;
+				top: -21px;
+				right: -52px;
+				@include transition(all 0.2s 0.3s ease-in-out);
+				opacity: 0;
+			}
+			&-light {
+				position: absolute;
+				top: -29px;
+				right: -58px;
+				@include transition(all 0.2s 0.4s ease-in-out);
+				opacity: 0;
+			}
+
+			// работа
+			&-ball-one--type {
+				position: absolute;
+			    top: 38px;
+			    right: -11px;
+			    @include transition(all 0.2s ease-in-out);
+			    opacity: 0;
+			    
+			}
+			&-ball-two--type {
+				position: absolute;
+				top: 30px;
+				right: -21px;
+				@include transition(all 0.2s 0.1s ease-in-out);
+				opacity: 0;
+			}
+			&-sky--type {
+				position: absolute;
+				top: -4px;
+				right: -78px;
+				@include transition(all 0.2s 0.2s ease-in-out);
+				opacity: 0;
+			}
+			&-work {
+				position: absolute;
+				top: 9px;
+				right: -66px;
+				@include transition(all 0.2s 0.3s ease-in-out);
+				opacity: 0;
+			}
+
+			// кофе
+			&-barber {
+				@include position(absolute, 48px 6px null null);
+				opacity: 0;
+				@include transition(all 0.2s ease-in-out);
+			}
+			&-us {
+				@include position(absolute, 38px 5px null null);
+				opacity: 0;
+				@include transition(all 0.2s  0.1s ease-in-out);
+			}
+			&-shake {
+				@include position(absolute, 40px -37px null null);
+				@include transform(rotate(80deg));
+				opacity: 0;
+				@include transition(all 0.2s  0.2s ease-in-out);
+				
+			}
+			&-hat {
+				@include position(absolute, -8px 0 null null);
+				@include transition(all 0.2s ease-in-out);
+				opacity: 0;
+				@include transform(translateX(20px));
+			}
+
+			// повар
+			&-cook-hat {
+				@include position(absolute, -49px -3px null null);
+				@include transition(all 0.2s ease-in-out);
+				opacity: 0;
+				// @include transform(translateY(-30px));
+			}
+			&-cook-hand {
+				@include position(absolute, 31px -56px null null);
+				@include transition(all 0.2s ease-in-out);
+				opacity: 0;
+				@include transform(translateY(25px));
+			}
+			&-tarel {
+				@include position(absolute, -9px -73px null null);
+				@include transition(all 0.2s ease-in-out);
+				opacity: 0;
+			}
+
+			// микроспок
+			 &-mickro {
+			 	@include position(absolute, 28px -27px null null);
+			 	@include transition(all 0.2s ease-in-out);
+			 	@include transform(translateX(30px));
+			 	opacity: 0;
+			 }
+
+			// яблоко
+			&-apple {
+				@include position(absolute, 26px -39px  null null);
+				opacity: 0;
+				@include transition(all 0.2s ease-in-out);
+				@include transform(translateX(-40px) translateY(-100px));
+			}
+
+			// шерлок
+			&-smoke {
+				@include position(absolute, 4px -31px  null null);
+				opacity: 0;
+			}
+			&-sherlock-hat {
+				@include position(absolute, -8px -1px  null null);
+				@include transition(all 0.2s ease-in-out);
+				@include transform(translateY(-40px));
+				opacity: 0;
+			}
+			&-trubka {
+				@include position(absolute, 43px -23px  null null);
+				opacity: 0;
+				@include transition(all 0.2s ease-in-out);
+				@include transform(scale(0));
+			}
 		}
 		&-text-img {
 			@include position(absolute, 12px null null 0);
@@ -129,7 +316,10 @@
 		&-face-img {
 			@include position(absolute, 0 0 null null);
 			pointer-events:none;
-			@include transform(scale(1));
+			@include transition(all 0.2s 0.3s ease-in-out);
+			&.active {
+				@include transform(rotateZ(33deg));
+			}
 		}
 		&:hover {
 			.header__logo-img {
@@ -142,12 +332,125 @@
 				@include transition(all 0.2s 0.2s ease-in-out);
 			}
 			.header__logo-face-img {
-				@include transform(scale(1));
+				// @include transform(scale(1));
 				// right: 71px;
 				@include transition(all 0.2s 0.4s ease-in-out);
 			}
 		}
 	}
+
+	// Новое оформление логотипа
+	&__logo-type {
+		&.active {
+			pointer-events: auto;
+			// руки
+			.header__logo-type-hand--one {
+				opacity: 1;
+				top: 23px;
+			}
+			.header__logo-type-hand--two {
+				opacity: 1;
+				top: 11px;
+				@include transition(all 0.2s 0.1s ease-in-out);
+			}
+
+			// пальма
+			.header__logo-type-glass {
+				opacity: 1;
+				top: 21px;
+			}
+			.header__logo-type-palm {
+				transition-delay: 0.1s;
+				opacity: 1;
+				top: 10px;
+			}
+			.header__logo-type-sun {
+				transition-delay: 0.2s;
+				opacity: 1;
+				@include animation(rotate 2s linear infinite)
+			}
+
+			// лампа 
+			.header__logo-type-ball-one,
+			.header__logo-type-ball-two,
+			.header__logo-type-sky,
+			.header__logo-type-lamp,
+			.header__logo-type-light {
+				opacity: 1;
+			}
+			.header__logo-type-light {
+				@include animation(fadeInOut 2s linear infinite)
+			}
+
+			// работа 
+			.header__logo-type-ball-one--type,
+			.header__logo-type-ball-two--type,
+			.header__logo-type-sky--type,
+			.header__logo-type-work {
+				opacity: 1;
+			}
+
+			// кофе
+			.header__logo-type-us {
+				opacity: 1;
+			}
+			.header__logo-type-barber {
+				opacity: 1;
+			}
+			.header__logo-type-shake {
+				@include transform(rotate(0deg));
+				opacity: 1;
+			}
+			.header__logo-type-hat {
+				opacity: 1;
+				@include transform(translateX(0px));
+			}
+
+			// повар 
+			.header__logo-type-cook-hat {
+				opacity: 1;
+				top: -29px;
+				@include animation(slide 0.4s 0.15s ease)
+				
+			}
+			.header__logo-type-cook-hand {
+				opacity: 1;
+				@include transform(translateY(0px));
+			}
+			.header__logo-type-tarel {
+				opacity: 1;
+				@include transform(rotateY(360deg));
+			}
+
+			// микроскоп
+			.header__logo-type-mickro {
+				opacity: 1;
+				@include transform(translateX(0px));
+			}
+
+			// яблоко
+			.header__logo-type-apple {
+				opacity: 1;
+				@include transform(translateX(-40px) translateY(-55px));
+				@include animation(drop 1s 0.3s ease)
+			}
+
+			// шерлок
+			.header__logo-type-smoke {
+				opacity: 1;
+				@include animation(opacityTop 1.5s ease infinite)
+			}
+			.header__logo-type-sherlock-hat {
+				opacity: 1;
+				@include transform(translateY(0px));
+			}
+			.header__logo-type-trubka {
+				opacity: 1;
+				@include transform(scale(1));
+			}
+		}
+	}
+
 	&__menu {
 		display: inline-block;
 		vertical-align: top;
@@ -403,5 +706,212 @@
 			height: 100%;
 			@include transform(scale(1.5));
 		}
+	}
+}
+
+@-webkit-keyframes rotate {
+	0% {
+		@include transform(rotate(0) scale(0.4));
+	}
+	50% {
+		@include transform(rotate(360deg) scale(1));
+	}
+	100% {
+		@include transform(rotate(720deg) scale(0.4));	
+	}
+}
+@-moz-keyframes rotate {
+	0% {
+		@include transform(rotate(0) scale(0.4));
+	}
+	50% {
+		@include transform(rotate(360deg) scale(1));
+	}
+	100% {
+		@include transform(rotate(720deg) scale(0.4));	
+	}
+}
+@keyframes rotate {
+	0% {
+		@include transform(rotate(0) scale(0.4));
+	}
+	50% {
+		@include transform(rotate(360deg) scale(1));
+	}
+	100% {
+		@include transform(rotate(720deg) scale(0.4));	
+	}
+}
+
+
+@-webkit-keyframes fadeInOut {
+	0% {
+		opacity: 0
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@-moz-keyframes fadeInOut {
+	0% {
+		opacity: 0
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+@keyframes fadeInOut {
+	0% {
+		opacity: 0
+	}
+	50% {
+		opacity: 1;
+	}
+	100% {
+		opacity: 0;
+	}
+}
+
+@-webkit-keyframes slide {
+	0% {
+		@include transform(skewX(0deg));
+	}
+	80% {
+		@include transform(skewX(20deg));
+	}
+	100% {
+		@include transform(skewX(0deg));
+	}
+}
+@-moz-keyframes slide {
+	0% {
+		@include transform(skewX(0deg));
+	}
+	80% {
+		@include transform(skewX(20deg));
+	}
+	100% {
+		@include transform(skewX(0deg));
+	}
+}
+@keyframes slide {
+	0% {
+		@include transform(skewX(0deg));
+	}
+	80% {
+		@include transform(skewX(20deg));
+	}
+	100% {
+		@include transform(skewX(0deg));
+	}
+}
+
+@-webkit-keyframes drop {
+	0% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(0deg));
+	}
+	30% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(360deg));
+	}
+	100% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(0deg));
+	}
+}
+@-moz-keyframes drop {
+	0% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(0deg));
+	}
+	30% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(360deg));
+	}
+	100% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(0deg));
+	}
+}
+@keyframes drop {
+	0% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(0deg));
+	}
+	30% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(360deg));
+	}
+	100% {
+		@include transform(translateX(-40px) translateY(-55px) rotateY(0deg));
+	}
+}
+
+@-webkit-keyframes opacityTop {
+	0% {
+		opacity: 0;
+		@include transform(translateY(0));
+	}
+	70% {
+		opacity: 1;
+		@include transform(translateY(-10px));
+	}
+	80% {
+		opacity: 0;
+		@include transform(translateY(-10px));
+	}
+	90% {
+		opacity: 0;
+		@include transform(translateY(-10px));
+	}
+
+	100% {
+		opacity: 0;
+		@include transform(translateY(0px));
+	}
+}
+@-moz-keyframes opacityTop {
+	0% {
+		opacity: 0;
+		@include transform(translateY(0));
+	}
+	70% {
+		opacity: 1;
+		@include transform(translateY(-10px));
+	}
+	80% {
+		opacity: 0;
+		@include transform(translateY(-10px));
+	}
+	90% {
+		opacity: 0;
+		@include transform(translateY(-10px));
+	}
+
+	100% {
+		opacity: 0;
+		@include transform(translateY(0px));
+	}
+}
+@keyframes opacityTop {
+	0% {
+		opacity: 0;
+		@include transform(translateY(0));
+	}
+	70% {
+		opacity: 1;
+		@include transform(translateY(-10px));
+	}
+	80% {
+		opacity: 0;
+		@include transform(translateY(-10px));
+	}
+	90% {
+		opacity: 0;
+		@include transform(translateY(-10px));
+	}
+
+	100% {
+		opacity: 0;
+		@include transform(translateY(0px));
 	}
 }
