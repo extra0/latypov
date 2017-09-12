@@ -329,6 +329,8 @@
 		overflow: hidden;
 		-webkit-flex: 0 0 auto;
 		flex: 0 0 auto;
+		width: 20%;
+		min-height: 25vw;
 		@include transition(all 0.5s ease-in-out);
 		@include display(flex);
 		@include justify-content(center);
@@ -337,6 +339,9 @@
 		position: relative;
 		top: 20px;
 		opacity: 0;
+		&--large {
+			width: 40%;
+		}
 		&:before {
 			content: '';
 			@include position(absolute, 0 null null 0);
@@ -425,9 +430,9 @@
 					}
 				}
 			}
-			&--large {
-				min-height: 500px;
-			}
+			// &--large {
+			// 	min-height: 500px;
+			// }
 			&-text,
 			&-block-link,
 			&-title {
