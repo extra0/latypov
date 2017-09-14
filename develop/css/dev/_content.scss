@@ -330,9 +330,6 @@
 		overflow: hidden;
 		-webkit-flex: 0 0 auto;
 		flex: 0 0 auto;
-		// width: 20%;
-		// min-height: 25vw;
-		@include transition(all 0.5s ease-in-out);
 		@include display(flex);
 		@include justify-content(center);
 		@include align-items(center);
