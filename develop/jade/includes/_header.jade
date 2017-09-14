@@ -5,12 +5,12 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 				a.header__logo(href="/")
 					if (logoWhite != true)
 						img.header__logo-img(src="/img/logo.png", alt="")
-						img.header__logo-text-img(src="/img/logo-dark-text.png", alt="")
-						img.header__logo-face-img(src="/img/logo-face.png", alt="")
+						img.header__logo-text-img.hidden-xs.hidden-sm(src="/img/logo-dark-text.png", alt="")
+						img.header__logo-face-img.hidden-xs.hidden-sm(src="/img/logo-face.png", alt="")
 					else
 						img.header__logo-img(src="/img/white-logo.png", alt="")
-						img.header__logo-text-img(src="/img/logo-white-text.png", alt="")
-						img.header__logo-face-img(src="/img/logo-face.png", alt="")
+						img.header__logo-text-img.hidden-xs.hidden-sm(src="/img/logo-white-text.png", alt="")
+						img.header__logo-face-img.hidden-xs.hidden-sm(src="/img/logo-face.png", alt="")
 					.header__logo-type-wrap
 						.header__logo-type
 							img.header__logo-type-hand--one(src="/img/logo/left-hand.png", alt="")

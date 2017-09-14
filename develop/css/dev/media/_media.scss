@@ -37,6 +37,9 @@
 		padding: 20px 0;
 		&__logo {
 			width: auto;
+			&-img {
+				opacity: 1;
+			}
 			&:hover {
 				.header__logo-img {
 					opacity: 1;
@@ -420,6 +423,9 @@
 		}
 		&__video {
 			height: 620px;
+		}
+		&__logo-img {
+			opacity: 1;
 		}
 	}
 	.about {
