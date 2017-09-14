@@ -244,8 +244,7 @@
 	}
 	.flex-section__block {
 		width: 50%;
-		min-width: 1px;
-		min-height: 380px;
+		padding-top: 79.99999999%;
 		&--large {
 			width: 100%;
 		}
@@ -392,8 +391,7 @@
 	}
 	.flex-section__block {
 		width: 100%;
-		min-width: 1px;
-		min-height: 380px;
+		padding-top: 159%;
 		&--large {
 			width: 100%;
 		}
@@ -446,11 +444,10 @@
 		margin-bottom: 30px;
 	}
 	.flex-section__block {
-		width: 33.33333%;
-		min-width: 1px;
-		min-height: 45vw;
+		width: 33.3333333%;
+		padding-top: 52.99999999%;
 		&--large {
-			width: 33.333333%;
+			width: 66.666667%;
 		}
 	}
 	.flex-section__block-item-block-link-value {
@@ -488,8 +485,7 @@
 	}
 	.flex-section__block {
 		width: 25%;
-		min-width: 1px;
-		min-height: 33vw;
+		padding-top: 39.75%;
 		&--large {
 			width: 50%;
 		}
@@ -530,8 +526,7 @@
 @media (min-width: 1200px) and (max-width: 1399px) {
 	.flex-section__block {
 		width: 25%;
-		min-width: 250px;
-		min-height: 33vw;
+		padding-top: 39.75%;
 		&--large {
 			width: 50%;
 		}
@@ -542,14 +537,17 @@
 		margin: 0 5px;
 	}
 	.flex-section__block {
-		min-height: 30vw;
+		width: 20%;
+		padding-top: 31.8%;
+		&--large {
+			width: 40%
+		}
 	}
 }
 @media (min-width: 1600px) and (max-width: 1899px) {
 	.flex-section__block {
 		width: 16.66666%;
-		min-width: 250px;
-		min-height: 25vw;
+		padding-top: 26.5%;
 		&--large {
 			width: 33.33333%;
 		}
@@ -557,9 +555,8 @@
 }
 @media (min-width: 1900px) {
 	.flex-section__block {
-		width: 14.2857%;
-		min-width: 250px;
-		min-height: 27vw;
+		width: 14.28571428571429%;
+		padding-top: 22.71428570%;
 		&--large {
 			width: 28.5714%;
 		}

@@ -34,6 +34,7 @@
 	}
 	&__title {
 		position: relative;
+		min-height: 68px;
 		&-value {
 			font-size: 48px;
 			font-weight:300;
@@ -329,8 +330,8 @@
 		overflow: hidden;
 		-webkit-flex: 0 0 auto;
 		flex: 0 0 auto;
-		width: 20%;
-		min-height: 25vw;
+		// width: 20%;
+		// min-height: 25vw;
 		@include transition(all 0.5s ease-in-out);
 		@include display(flex);
 		@include justify-content(center);
@@ -398,13 +399,13 @@
 			width: 100%;
 			height: 100%;
 			background-size: cover!important;
+			@include position(absolute, 0 null null 0);
 			@include flex-wrap(wrap);
 			@include justify-content(center);
 			@include display(flex);
 			@include align-content(space-between);
 			text-align: center;
 			padding: 30px;
-			position: relative;
 			z-index: 1;
 			&:before {
 				content: '';
