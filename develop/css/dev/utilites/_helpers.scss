@@ -55,7 +55,7 @@ a {
 	font-weight: 600;
 }
 
-input[type="checkbox"]:not([class]) {
+.js-politicks-checkbox {
 	display: none;
 	& + label {
 		position: relative;
