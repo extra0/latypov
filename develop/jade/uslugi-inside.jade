@@ -19,7 +19,7 @@ block content
 						span.service-description__info-block-text Стоимость от:
 						span.service-description__info-block-price-value 50 000
 							span.rub a
-					a.btn.btn-lg.btn-warning.js-order-trigger(href="javascript:void(0);") Отправить заявку
+					a.btn.btn-lg.btn-warning.js-order-trigger.service-description__info-block-btn(href="javascript:void(0);") Отправить заявку
 				.service-description__info-block.col-sm-6.col-xs-12
 					span.service-description__info-block-text(style="margin-top: 36px;") Что входит в стоимость:
 					ul.service-description__info-block-list
@@ -36,28 +36,26 @@ block content
 	.text-center
 		.subtitle Примеры работ
 	// / работы
-	.flex-section.no-margin
+	.flex-section(style="margin-bottom: -5px;")
 		- for (i=1;i<=6;i++) {
-			a.flex-section__block.col-sm-6.col-md-3.col-xs-6.col-xxs-12(style="background: url(../img/content/work-2.jpg) center no-repeat" href="#!")
-				.flex-section__block-item
+			.flex-section__block.flex-section__block--black(style="background: url(../img/content/work-2.jpg) center no-repeat")
+				a.flex-section__block-item(href="#!")
 					span.flex-section__block-item-title.flex-section__block-item-title--sm Вечерние афиши ресторана «Бараш»
 					span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
 					.flex-section__block-item-block-link
 						span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
-						span.flex-section__block-item-block-link-devider /
 						span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
 		- }
-		a.flex-section__block.col-sm-6.col-md-3.col-xs-6.col-xxs-12( href="#!")
-			.flex-section__block-item.flex-section__block-item--dark
+		.flex-section__block
+			a.flex-section__block-item.flex-section__block-item--dark( href="#!")
 				span.flex-section__block-item-title.flex-section__block-item-title--sm Вечерние афиши ресторана «Бараш»
 				span.flex-section__block-item-text Сайт компании строящей дома из бруса и производящей стройматериалы
-				img.flex-section__block-item-img(src="img/content/some-img.png", alt="")
 				.flex-section__block-item-block-link
 					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Сайты
-					span.flex-section__block-item-block-link-devider /
 					span.flex-section__block-item-block-link-value(onclick="location.href='http://site.ru'") Корпоративные
-		a.flex-section__block.col-sm-6.col-md-3.col-xs-6.col-xxs-12(style="background: url(../img/all-bg.jpg) center no-repeat" href="#!")
-			.flex-section__block-item
+				img.flex-section__block-item-img(src="img/content/some-img.png", alt="")
+		.flex-section__block(style="background: url(../img/all-bg.jpg) center no-repeat")
+			a.flex-section__block-item(href="#!")
 				.flex-section__block-item-note Все работы
 	// форма
 	.form-section.form-section--img-bg

@@ -2,6 +2,7 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 	.container
 		.row
 			.col-sm-2.col-xs-5.col-xxs-4
+				// логотип
 				a.header__logo(href="/")
 					if (logoWhite != true)
 						img.header__logo-img(src="/img/logo.png", alt="")
@@ -48,12 +49,16 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 							img.header__logo-type-smoke(src="/img/logo/smoke.png", alt="")
 							img.header__logo-type-sherlock-hat(src="/img/logo/sherlock-hat.png", alt="")
 							img.header__logo-type-trubka(src="/img/logo/trubka.png", alt="")
+				// логотип
 			.col-md-4.col-md-offset-1.col-sm-4.col-xs-6.xxs-text-center
+				// адрес
 				.header__address
 					span.header__address-city Москва
 					a.header__address-phone(href="tel:+74993901758") +7 (499) 390-17-58
+				// / адрес
 				a.header__order.js-order-trigger.hidden-xs(href="javascript:void(0);") Оставить заявку
 			.col-md-5.col-sm-6.col-xs-1.col-xxs-2
+				// меню
 				button.header__menu-btn.visible-xs(type="button")
 				.header__menu-search-wrap.hidden-xs
 					.header__menu
@@ -66,6 +71,7 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 							button.header__search-submit(type="submit") 
 							input.header__search-input(type="text" required placeholder="Поиск по сайту")
 						button.header__search-trigger.js-search-trigger(type="button")
+				// / меню
 		if (indexHeader == true)
 			.row
 				.col-xs-12
@@ -87,6 +93,7 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 							.index-preview__scroll-img
 							.index-preview__scroll-arrows
 	if (indexHeader != true)
+		// дропменюу
 		.header__sub-menu(class="#{error == true ? 'hidden':''}")
 			button.header__sub-menu-btn.js-trigger(type="button" data-target="#subMenu")
 			.container
@@ -133,6 +140,9 @@ header.header(class="#{indexHeader == true ? 'header--index header--dark':''}" c
 														a.header__dropdown-menu-list-item-link(href="#!") Корпоративный сайт
 													li.header__dropdown-menu-list-item
 														a.header__dropdown-menu-list-item-link(href="#!") Промо сайт (Landing page)
+		// / дроп меню
 	if (about == true)
+		// видео
 		.header__video
 			iframe#iframe.hidden-xs(src="https://www.youtube.com/embed/LG0Cfn8qnlw?rel=0&showinfo=0&autoplay=1&loop=1&playlist=LG0Cfn8qnlw&mute=1", frameborder="0" allowfullscreen volume="0")
+		// / видео

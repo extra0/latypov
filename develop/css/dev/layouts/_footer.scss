@@ -29,13 +29,13 @@
 			&--fb {
 				background: url(../img/fb.png)  0 0 no-repeat;
 				&:hover {
-					background: url(../img/fb-hover.png)  0 0 no-repeat;
+					background-position: 0 100%;
 				}
 			}
 			&--inst {
 				background: url(../img/inst.png)  0 0 no-repeat;
 				&:hover {
-					background: url(../img/inst-hover.png)  0 0 no-repeat;
+					background-position: 0 100%;
 				}
 			}
 		}
@@ -70,7 +70,7 @@
 			}
 			&:hover {
 				&:before {
-					background: url(../img/pdf-hover.png) 0 0 no-repeat;
+					background-position: 0 100%;
 				}
 			}
 		}

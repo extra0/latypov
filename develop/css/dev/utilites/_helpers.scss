@@ -38,6 +38,9 @@
 	color: #fff;
 }
 
+input:invalid {
+	box-shadow: none;
+}
 
 a {
 	color: $blue;
@@ -50,61 +53,6 @@ a {
 	font-size: 30px;
 	margin: 0 0 40px 0;
 	font-weight: 600;
-}
-
-.form {
-	&-group {
-		margin-bottom: 10px;
-		position: relative;
-	}
-	&-control {
-		resize: none;
-		width: 100%;
-		@include transition(all 0.2s ease-in-out);
-		border: 1px solid #cfcfcf;
-		background: rgba(0, 169, 226, 0.1);
-		font-size: 18px;
-		font-weight: 300;
-		padding: 14px 20px;
-		border-radius: 5px;
-		&:focus {
-			border: 1px solid #00a9e2;
-			background: none;
-			& + .form-label {
-				top: 2px;
-				font-size: 11px;
-			}
-		}
-		&:hover {
-			background: none;
-		}
-		&--area {
-			height: 176px;
-		}
-	}
-	&-label {
-		@include transition(all 0.2s ease-in-out);
-		font-size: 18px;
-		font-weight: 300;
-		@include position(absolute, 14px null null 21px);
-		pointer-events: none;
-		&.active {
-			top: 2px;
-			font-size: 11px;
-		}
-		&--checkbox {
-			font-size: 14px;
-			display: inline-block;
-		}
-	}
-	&-link {
-		border-bottom: 1px solid $hoverBlue;
-		&:hover,
-		&:focus {
-			border-bottom: 1px solid $hoverRuby;
-			text-decoration: none;
-		}
-	}
 }
 
 input[type="checkbox"] {
@@ -169,8 +117,8 @@ input[type="checkbox"] {
 		color: $main-color;
 		&:focus,
 		&:hover {
-			color: $main-color;
-			background: lighten(#ffcc00, 10%);
+			color: #fff;
+			background: $ruby;
 		}
 	}
 	&-block {
@@ -181,6 +129,65 @@ input[type="checkbox"] {
 		padding: 16px 78px;
 	}
 }
+
+.form {
+	&-group {
+		margin-bottom: 10px;
+		position: relative;
+	}
+	&-control {
+		resize: none;
+		width: 100%;
+		@include transition(all 0.2s ease-in-out);
+		border: 1px solid #cfcfcf;
+		background: rgba(0, 169, 226, 0.1);
+		font-size: 18px;
+		font-weight: 300;
+		padding: 14px 20px;
+		border-radius: 5px;
+		&:focus {
+			border: 1px solid #00a9e2;
+			background: none;
+			& + .form-label {
+				top: 2px;
+				font-size: 11px;
+			}
+		}
+		&:hover {
+			background: none;
+		}
+		&--area {
+			height: 176px;
+		}
+	}
+	&-label {
+		@include transition(all 0.2s ease-in-out);
+		font-size: 18px;
+		font-weight: 300;
+		@include position(absolute, 14px null null 21px);
+		pointer-events: none;
+		&.active {
+			top: 2px;
+			font-size: 11px;
+		}
+		&--checkbox {
+			font-size: 14px;
+			display: inline-block;
+		}
+	}
+	&-link {
+		border-bottom: 1px solid $hoverBlue;
+		&:hover,
+		&:focus {
+			border-bottom: 1px solid $hoverRuby;
+			text-decoration: none;
+		}
+	}
+	&-btn {
+		padding: 12px 62px;
+	}
+}
+
 .title {
 	font-size: 48px;
 	font-weight: 600;
