@@ -55,7 +55,7 @@ a {
 	font-weight: 600;
 }
 
-.main-wrapper input[type="checkbox"] {
+input[type="checkbox"]:not([class]) {
 	display: none;
 	& + label {
 		position: relative;
