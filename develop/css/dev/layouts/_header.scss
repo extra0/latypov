@@ -631,7 +631,7 @@
 						}
 					}
 					&.current {
-						background: $blue;
+						background: #0074ae;
 					}
 					span {
 						border-bottom: 1px solid #ddd
@@ -644,7 +644,7 @@
 	&__dropdown {
 		&-menu {
 			@include position(absolute, 52px null null 0);
-			background: $blue;
+			background: #0074ae;
 			width: 100%;
 			padding: 40px 0 29px 0;
 			opacity: 0;
