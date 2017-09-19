@@ -673,6 +673,12 @@
 					background: none
 				}
 			}
+			.btn {
+				background: transparent;
+				&:hover {
+					background: $ruby;
+				}
+			}
 		}
 		&-title {
 			text-align: center;
@@ -1522,4 +1528,7 @@
     		z-index: 10;
     	}
     }
+}
+.main-user-consent-request a {
+	text-decoration: underline;
 }
